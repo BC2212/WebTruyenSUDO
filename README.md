@@ -1,4 +1,5 @@
 # WebTruyenSUDO
+*Link drive:* https://drive.google.com/drive/folders/1uTt6FixxIzNsSiKt8zMWt17TFkDQxdZA?usp=sharing
 **Yêu cầu người dùng:**
 1. Có thể đăng ký, đăng nhập (tài khoản tự tạo/qua Facebook).
 2. Tự động chuyển sang chapter tiếp khi đọc đến cuối chapter hiện tại.
