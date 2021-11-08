@@ -1,0 +1,57 @@
+﻿@model WebSUDO.Models.DangKy
+@{
+    ViewData["Title"] = "DangKi";
+}
+
+<h1>Đăng Ký</h1>
+
+<fieldset>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <table >
+
+            <tr>
+                <td>
+                    @Html.LabelFor(Model => Model.Email)
+                </td>
+                <td>
+
+                    <input id="Email" name="Email" type="email" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td style="">
+                    @Html.LabelFor(Model => Model.Password)
+                </td>
+                <td>
+                    <input id="Password" name="Password" type="password" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(Model => Model.ConfirmPassword)
+                </td>
+                <td>
+                    <input id="ConfirmPassword" name="ConfirmPassword" type="password" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Đăng ký" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    }
+
+</fieldset>
