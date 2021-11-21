@@ -12,10 +12,10 @@
         <div class="c-header__top">
             <ul class="search-main-menu">
                 <li>
-                    <form id="blog-post-search" class="ajax manga-search-form" action="https://saytruyen.net/search" method="get">
+                    <form id="blog-post-search" class="ajax manga-search-form" action="#" method="get">
                         <input type="text" placeholder="Search..." name="s" value="" class="manga-search-field ui-autocomplete-input" autocomplete="off" required>
-                        <a href="javascript:void(0)" class="close-form-search"><i class="icon ion-md-close"></i></a>
-                        <button type="submit"><i class="icon ion-md-search"></i></button>
+                        <a href="javascript:void(0)" class="close-form-search"><i class="icon" ><img src="https://img.icons8.com/ios-glyphs/30/000000/xbox-x.png" /></i></a>
+                        <button type="submit"><img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" /></i></button>
                         <div class="loader-inner line-scale">
                             <div></div>
                             <div></div>
@@ -35,19 +35,19 @@
                                 <div class="main-menu">
                                     <ul class="nav navbar-nav main-navbar">
                                         <li>
-                                            <a href="https://saytruyen.net/genre">Thể Loại</a>
+                                            <a href="#">Thể Loại</a>
                                         </li>
                                         <li>
-                                            <a href="https://saytruyen.net/completed">Hoàn Thành</a>
+                                            <a href="#">Hoàn Thành</a>
                                         </li>
                                         <li>
-                                            <a href="https://saytruyen.net/history">Lịch Sử</a>
+                                            <a href="#">Lịch Sử</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
                                         </li>
                                         <li class="up-manga">
-                                            <a href="https://saytruyen.net/user-panel" class="menu-link  main-menu-link"> Đăng Truyện </a>
+                                            <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -55,12 +55,11 @@
                                     <ul class="main-menu-search nav-menu">
                                         <li class="menu-search">
                                             <a href="javascript:;" class="open-search-main-menu">
-                                                <i class="icon ion-md-search"></i>
-                                                <i class="icon ion-android-close"></i>
+                                                <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" />
                                             </a>
                                             <ul class="search-main-menu">
                                                 <li>
-                                                    <form class="manga-search-form search-form ajax" action="https://saytruyen.net/search" method="get">
+                                                    <form class="manga-search-form search-form ajax" action="#" method="get">
                                                         <input class="manga-search-field ui-autocomplete-input" type="text" placeholder="Search..." name="s" value="" autocomplete="off">
                                                         <input type="hidden" name="post_type" value="wp-manga"> <i class="icon ion-ios-search"></i>
                                                         <div class="loader-inner ball-clip-rotate-multiple">
@@ -104,13 +103,13 @@
             <nav class="off-menu">
                 <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
                     <li>
-                        <a href="https://saytruyen.net/genre" class="menu-link  main-menu-link"> Thể Loại </a>
+                        <a href="#" class="menu-link  main-menu-link"> Thể Loại </a>
                     </li>
                     <li>
-                        <a href="https://saytruyen.net/completed" class="menu-link  main-menu-link"> Hoàn Thành </a>
+                        <a href="#" class="menu-link  main-menu-link"> Hoàn Thành </a>
                     </li>
                     <li>
-                        <a href="https://saytruyen.net/history" class="menu-link  main-menu-link"> Lịch Sử </a>
+                        <a href="#" class="menu-link  main-menu-link"> Lịch Sử </a>
                     </li>
                     <li>
                         <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
@@ -123,16 +122,16 @@
                 <div class="sub-nav_content">
                     <ul class="sub-nav_list list-inline second-menu">
                         <li>
-                            <a href="https://saytruyen.net/genre/manhwa">Manhwa</a>
+                            <a href="#">Manhwa</a>
                         </li>
                         <li>
-                            <a href="https://saytruyen.net/genre/manga">Manga</a>
+                            <a href="#">Manga</a>
                         </li>
                         <li>
-                            <a href="https://saytruyen.net/genre/manhua">Manhua</a>
+                            <a href="#">Manhua</a>
                         </li>
                         <li>
-                            <a href="https://saytruyen.net/genre/romance">Romance</a>
+                            <a href="#">Romance</a>
                         </li>
                     </ul>
                 </div>
@@ -149,9 +148,24 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - WebSUDO - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="site-footer">
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="nav-footer">
+                            <ul class="list-inline">
+                                <li><a href="#">Điều Khoản</a></li>
+                                <li><a href="#">Chính Sách</a></li>
+                                <li><a href="#">Liên lạc</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p>© 2021 <a href="#">WebSUDO</a> All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
