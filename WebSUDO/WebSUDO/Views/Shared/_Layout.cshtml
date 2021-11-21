@@ -8,26 +8,140 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebSUDO</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <header class="site-header">
+        <div class="c-header__top">
+            <ul class="search-main-menu">
+                <li>
+                    <form id="blog-post-search" class="ajax manga-search-form" action="https://saytruyen.net/search" method="get">
+                        <input type="text" placeholder="Search..." name="s" value="" class="manga-search-field ui-autocomplete-input" autocomplete="off" required>
+                        <a href="javascript:void(0)" class="close-form-search"><i class="icon ion-md-close"></i></a>
+                        <button type="submit"><i class="icon ion-md-search"></i></button>
+                        <div class="loader-inner line-scale">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="ui-menu" style="display: none;"></div>
+                    </form>
+                </li>
+            </ul>
+            <div class="main-navigation style-1 ">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="main-navigation_wrap">
+                                <div class="main-menu">
+                                    <ul class="nav navbar-nav main-navbar">
+                                        <li>
+                                            <a href="https://saytruyen.net/genre">Thể Loại</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://saytruyen.net/completed">Hoàn Thành</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://saytruyen.net/history">Lịch Sử</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
+                                        </li>
+                                        <li class="up-manga">
+                                            <a href="https://saytruyen.net/user-panel" class="menu-link  main-menu-link"> Đăng Truyện </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="search-navigation search-sidebar">
+                                    <ul class="main-menu-search nav-menu">
+                                        <li class="menu-search">
+                                            <a href="javascript:;" class="open-search-main-menu">
+                                                <i class="icon ion-md-search"></i>
+                                                <i class="icon ion-android-close"></i>
+                                            </a>
+                                            <ul class="search-main-menu">
+                                                <li>
+                                                    <form class="manga-search-form search-form ajax" action="https://saytruyen.net/search" method="get">
+                                                        <input class="manga-search-field ui-autocomplete-input" type="text" placeholder="Search..." name="s" value="" autocomplete="off">
+                                                        <input type="hidden" name="post_type" value="wp-manga"> <i class="icon ion-ios-search"></i>
+                                                        <div class="loader-inner ball-clip-rotate-multiple">
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                        <input type="submit" value="Search">
+                                                        <ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-togle__menu">
+                                    <button type="button" class="menu_icon__open">
+                                        <span></span> <span></span> <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu off-canvas">
+            <div class="close-nav">
+                <button class="menu_icon__close">
+                    <span></span> <span></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </div>
+            <div class="c-modal_item">
+
+                <span class="c-modal_sign-in">
+                    <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng Nhập</a>
+                </span>
+                <span class="c-modal_sign-up">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng Kí</a>
+                </span>
+            </div>
+            <nav class="off-menu">
+                <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                    <li>
+                        <a href="https://saytruyen.net/genre" class="menu-link  main-menu-link"> Thể Loại </a>
+                    </li>
+                    <li>
+                        <a href="https://saytruyen.net/completed" class="menu-link  main-menu-link"> Hoàn Thành </a>
+                    </li>
+                    <li>
+                        <a href="https://saytruyen.net/history" class="menu-link  main-menu-link"> Lịch Sử </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sub-header-nav with-border">
+            <div class="container">
+                <div class="sub-nav_content">
+                    <ul class="sub-nav_list list-inline second-menu">
+                        <li>
+                            <a href="https://saytruyen.net/genre/manhwa">Manhwa</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li>
+                            <a href="https://saytruyen.net/genre/manga">Manga</a>
+                        </li>
+                        <li>
+                            <a href="https://saytruyen.net/genre/manhua">Manhua</a>
+                        </li>
+                        <li>
+                            <a href="https://saytruyen.net/genre/romance">Romance</a>
                         </li>
                     </ul>
                 </div>
+                <div class="c-modal_item">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng Nhập</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng Kí</a>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">

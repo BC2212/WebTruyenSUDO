@@ -1,771 +1,1520 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-    <meta name="theme-color" content="#13b506">
-    <meta name="msapplication-navbutton-color" content="#13b506">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#13b506">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-
-    <title>Truyện tranh</title>
-
-    <link rel='stylesheet' id='wp-block-library-css' href='css/wp-includes/css/dist/block-library/style.min.css' media='all' />
-
-
-    <link href="css/publicalle67d.css rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/phim.css" rel="stylesheet">
-    <link href="css/bootstrap194c.css" rel="stylesheet" media="screen">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-    <script type="text/javascript" src="js/carouFredSel.js"></script>
-    <script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
-    <script type="text/javascript" src="js/jquery.dcmegamenu.1.3.3.js"></script>
-    <script type="text/javascript" src="js/jquery.gibberish.aes.js"></script>
-    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="js/jquery.ellipsis.js"></script>
-    <script type="text/javascript" src="js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="js/jquery.md5.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/fx/util.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/global.js"></script>
-    <script async="true" src="js/content.gophim7c7f.js"></script>
-    <link href="css/homeboyd537.css" rel="stylesheet" />
-    <script src="js/jquery.raty.js" type="text/javascript"></script>
-    <script src="js/public.film456.js" type="text/javascript"></script>
-    <script src="js/film-info.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Say Truyện | Đọc Truyện Tranh Manga Manhwa Manhua Online</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <script async src="https://www.googletagmanager.com/gtag/js"></script>
+    <meta name='robots' content='index, follow' />
+    <meta name="googlebot-news" content="index,follow" />
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609278253087612" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <div class="top-message"></div>
-    <header>
-        <div class="header">
-            <div class="container">
-                <div class="header-logo"><a class="logo" href="#" title="logo"><img style="padding: 8px 40px 8px 15px;" src="~/lib/img/logo/Anything.png" data-lazy-src=""><noscript><img src="../websudo/wp-content/uploads/2021/logo/Anything.png"></noscript></a></div>
-                <div class="widget_search">
-                    <form method="GET" id="form-search" action="search/">
-                        <div><input type="text" name="keyword" placeholder="Tìm: Tên truyện" value="" onkeyup="onSearch(this.value)" id="searchkeyword" autocomplete="off"><input id="searchsubmit" class="" value=" " type="submit"></div>
-                    </form>
-                    <div class="search-suggest" style="display: none;">
-                        <ul style="margin-bottom: 0;" id="search-suggest-list"></ul>
-                    </div>
-                </div>
-                <div class="widget_user_header"><a class="button-register" rel="nofollow" href="#"></a><a class="button-login" rel="nofollow" href="#"></a></div>
-            </div>
-        </div>
-    </header>
-    <div class="clear"></div>
-
-    <head>
-        <meta name="theme-color" content="#f6a047">
-    </head>
-    <nav>
-        <div class="clear"></div>
+    <div class="slide-home">
         <div class="container">
-            <div class="menu-menu-1-container">
-                <ul id="mega-menu-1" class="menu">
-                    <li><a title="Phim Mới" href="#">Trang chủ</a></li>
-                    <li>
-                        <a title="Thể Loại" href="#">Thể Loại</a>
-                        <ul>
-                            <li><a title="Tag Truyện" href="">Tag Truyện1</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện2</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện3</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện4</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện5</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện6</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện7</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện8</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện9</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện10</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện11</a></li>
-                            <li><a title="Tag Truyện" href="">Tag Truyện12</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="clear"></div>
-    <div class="container">
-        <div class="clear"></div>
-        <div class="row top-movie">
-            <div class="col-lg-12">
-                <h2 class="header-list-index"><span class="title-list-index">Truyện HOT</span></h2>
-                <div class="top-movie-list block-wrapper">
-                    <div class="list_carousel">
-                        <ul id="movie-carousel-top">
-                            <li>
-                                <a href="#" title="Shang-Chi Và Huyền Thoại Thập Nhẫn - Shang-Chi and the Legend of the Ten Rings">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/09/shang-chi-va-huyen-thoai-thap-nhan-51239-thumbnail.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Shang-Chi Và Huyền Thoại Thập Nhẫn</h3>
-                                            <h4 class="movie-name-2">Shang-Chi and the Legend of the Ten Rings</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Giải Cứu ‘Guy’ - Free Guy">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/logo/611727c62b3cf.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Giải Cứu ‘Guy’</h3>
-                                            <h4 class="movie-name-2">Free Guy</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Đảo Hải Tặc - One Piece">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/logo/dao-hai-tac-34373-thumbnail.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Đảo Hải Tặc</h3>
-                                            <h4 class="movie-name-2">One Piece</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Bạn Trai Thuê - Boy For Rent">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/18834-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Bạn Trai Thuê</h3>
-                                            <h4 class="movie-name-2">Boy For Rent</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Góa Phụ Đen - Black Widow">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/goa-phu-den-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Góa Phụ Đen</h3>
-                                            <h4 class="movie-name-2">Black Widow</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Loki (Phần 1) - Loki (Season 1)">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/60810af157ad7-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Loki (Phần 1)</h3>
-                                            <h4 class="movie-name-2">Loki (Season 1)</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Nhóc Trùm: Nối Nghiệp Gia Đình - The Boss Baby: Family Business">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/60e02a5beab3f-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Nhóc Trùm: Nối Nghiệp Gia Đình</h3>
-                                            <h4 class="movie-name-2">The Boss Baby: Family Business</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Vệ Sĩ Sát Thủ 2: Nhà Có Nóc - Hitman&#039;s Wife&#039;s Bodyguard">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/60c6a6a01280f-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Vệ Sĩ Sát Thủ 2: Nhà Có Nóc</h3>
-                                            <h4 class="movie-name-2">Hitman&#039;s Wife&#039;s Bodyguard</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Chí Khí Bay Cao - New Horizon">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/06/chi-khi-bay-cao-6455-250x350.jpeg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Chí Khí Bay Cao</h3>
-                                            <h4 class="movie-name-2">New Horizon</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Người Yêu Chàng Kỹ Sư - Nitiman">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/06/nguoi-yeu-chang-ky-su-9006-250x350.jpeg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Người Yêu Chàng Kỹ Sư</h3>
-                                            <h4 class="movie-name-2">Nitiman</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Truy Tìm Kẻ Sát Nhân 4 - Voice 4: Judgment Hour">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/truy-tim-ke-sat-nhan-4-474-thumbnail-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Truy Tìm Kẻ Sát Nhân 4</h3>
-                                            <h4 class="movie-name-2">Voice 4: Judgment Hour</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Yêu (Kết Hôn và Ly Dị) 2 - Love">
-                                    <div data-bg="../websudo/wp-content/uploads/2021/07/yeu-ket-hon-va-ly-di-2-447-thumbnail-250x350.jpg" class="movie-carousel-top-item rocket-lazyload" style="">
-                                        <div class="movie-carousel-top-item-meta">
-                                            <h3 class="movie-name-1">Yêu (Kết Hôn và Ly Dị) 2</h3>
-                                            <h4 class="movie-name-2">Love</h4>
-                                            <span class="ribbon" style="top:-235px;">Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="clear"></div>
-                        <a id="prevTop" class="prev" rel="nofollow"><span class="arrow-icon left"></span></a>
-                        <a id="nextTop" class="next" rel="nofollow"><span class="arrow-icon right"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8">
-
-                <div class="movie-list-index home-v2">
-                    <h2 class="header-list-index">
-                        <span class="title-list-index">Truyện</span>
+            <div class="row">
+                <div class="c-blog__heading style-2 font-heading ">
+                    <h2 class="h4">
+                        <i class="icon ion-md-flash"></i> Truyện hot trong ngày
                     </h2>
-                    <div class="last-film-box-wrapper">
-                        <ul class="last-film-box" id="movie-last-theater">
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Cừu Non - Lamp (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/11/cuu-non-54825-thumbnail.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Cừu Non</div><span class="movie-title-2">Lamp (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Ngôi Nhà Dưới Nước - The Deep House (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/11/ngoi-nha-duoi-nuoc-54785-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Ngôi Nhà Dưới Nước</div><span class="movie-title-2">The Deep House (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Những Kẻ Nguyền Rủa - The Cursed: Dead Man’s Prey (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/nhung-ke-nguyen-rua-54584-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Những Kẻ Nguyền Rủa</div><span class="movie-title-2">The Cursed: Dead Man’s Prey (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Không Ai Ngủ Trong Rừng Đêm Nay 2 - Nobody Sleeps in the Woods Tonight 2 (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/khong-ai-ngu-trong-rung-dem-nay-2-54580-thumbnail.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Không Ai Ngủ Trong Rừng Đêm Nay 2</div><span class="movie-title-2">Nobody Sleeps in the Woods Tonight 2 (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Dạ Quỷ Rừng Sâu - The Widow (2020)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/da-quy-rung-sau-54434-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Dạ Quỷ Rừng Sâu</div><span class="movie-title-2">The Widow (2020)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Mẹ Tôi Gánh Đội - Mother Gamer (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/me-toi-ganh-doi-54397-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Mẹ Tôi Gánh Đội</div><span class="movie-title-2">Mother Gamer (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Cảnh Báo - Warning (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/canh-bao-54379-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Cảnh Báo</div><span class="movie-title-2">Warning (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Hành Tinh Cát - Dune (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/hanh-tinh-cat-54373-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Hành Tinh Cát</div><span class="movie-title-2">Dune (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Halloween Chết Chóc - Halloween Kills (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/halloween-chet-choc-54358-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Halloween Chết Chóc</div><span class="movie-title-2">Halloween Kills (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Âm Mưu Trộm Tranh - The Burnt Orange Heresy (2020)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/am-muu-trom-tranh-54351-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Âm Mưu Trộm Tranh</div><span class="movie-title-2">The Burnt Orange Heresy (2020)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Những Vị Thánh Của Newark - The Many Saints of Newark (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/nhung-vi-thanh-cua-newark-54336-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Những Vị Thánh Của Newark</div><span class="movie-title-2">The Many Saints of Newark (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="movie-item m-block" href="#" title="Sở Cảnh Sát - Copshop (2021)
-		">
-                                    <div class="block-wrapper">
-                                        <div class="movie-thumbnail ratio-box ratio-3_4">
-                                            <div data-bg="../websudo/wp-content/uploads/2021/10/so-canh-sat-54334-thumbnail-250x350.jpg" class="public-film-item-thumb ratio-content rocket-lazyload" style=""></div>
-                                        </div>
-                                        <div class="movie-meta">
-                                            <div class="movie-title-1">Sở Cảnh Sát</div><span class="movie-title-2">Copshop (2021)</span>
-                                            <span class="ribbon"> Sao đánh giá</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                </div>
+                <div id="slide-top" class="owl-carousel">
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/f2939ee4ac99a85fb929931f5e9e4c84.jpg" alt="Bạn Học Của Tôi Là Lính Đánh Thuê">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue.html">Bạn Học Của Tôi Là Lính Đánh Thuê</a></div>
+                            <div class="post-on font-meta">
+                                <span>3 giờ trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue/chuong-60">Chapter 60</a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="page-navigation">
-                    <ul class="pagination pagination-lg">
-                        <li><span aria-current="page" class=" current">1</span></li>
-                        <li><a class="" href="#">2</a></li>
-                        <li><a class="" href="#">3</a></li>
-                        <li><a class="" href="#">4</a></li>
-                        <li><a class="next" href="#">»</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <footer>
-                <div class="footer">
-                    <div class="container">
-                        <div class="bar">
-                            <div class="bar-wrap">
-                                <div class="links">
-                                    <img src="../websudo/wp-content/uploads/2021/logo/Anything.png" alt="Phim Mới" /><noscript><img src="../websudo/wp-content/uploads/2021/logo/Anything.png" alt="Phim Mới" /></noscript>
-                                    <br>
-                                </div>
-                                <div class="textlink">
-                                    <div class="hotlink">
-                                        <h3 class="phimaz-foot">Tag truyện</h3>
-                                        <a href="" title="Tag truyện">Tag truyện1</a>
-                                        <a href="" title="Tag truyện">Tag truyện2</a>
-                                        <a href="" title="Tag truyện">Tag truyện3</a>
-                                        <a href="" title="Tag truyện">Tag truyện4</a>
-                                        <a href="" title="Tag truyện">Tag truyện5</a>
-                                    </div>
-                                </div>
-
-                                <div class="clear"></div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-co-gai-tu-ung-dung-nhan-tin-ngau-nhien.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/af140f4b6a38ad25270f93f60ab75f8b.jpg" alt="Cô gái từ ứng dụng nhắn tin ngẫu nhiên">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-co-gai-tu-ung-dung-nhan-tin-ngau-nhien.html">Cô gái từ ứng dụng nhắn tin ngẫu nhiên</a></div>
+                            <div class="post-on font-meta">
+                                <span>2 ngày trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-co-gai-tu-ung-dung-nhan-tin-ngau-nhien/chuong-149">Chapter 149</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-ke-hoach-san-ma-nam-thoi-hien-dai.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/84d8ee0c8273adae5c0d4b4e9c0723cb.jpg" alt="Kế Hoạch Chinh Phục Ma Nam Hiện Đại">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-ke-hoach-san-ma-nam-thoi-hien-dai.html">Kế Hoạch Chinh Phục Ma Nam Hiện Đại</a></div>
+                            <div class="post-on font-meta">
+                                <span>2 ngày trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-ke-hoach-san-ma-nam-thoi-hien-dai/chuong-21">Chapter 21</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-su-tro-lai-cua-huyen-thoai.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/70a82ee8a99b97fb0d12a4ca43fe4a8b.jpg" alt="Sự Trở Lại Của Huyền Thoại">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-su-tro-lai-cua-huyen-thoai.html">Sự Trở Lại Của Huyền Thoại</a></div>
+                            <div class="post-on font-meta">
+                                <span>14 giờ trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-su-tro-lai-cua-huyen-thoai/chuong-25">Chapter 25</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-su-tro-lai-cua-hiep-si-giao-vo-song.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/22de1429eb1135895f0b939277a2f287.jpg" alt="Sự Trở Lại Của Hiệp Sĩ Giáo Vô Song">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-su-tro-lai-cua-hiep-si-giao-vo-song.html">Sự Trở Lại Của Hiệp Sĩ Giáo Vô Song</a></div>
+                            <div class="post-on font-meta">
+                                <span>14 giờ trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-su-tro-lai-cua-hiep-si-giao-vo-song/chuong-26">Chapter 26</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-mairimashita-iruma-kun.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/2a6fc64eae53b99056c0f035bb766c49.jpg" alt="Mairimashita! Iruma-Kun">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-mairimashita-iruma-kun.html">Mairimashita! Iruma-Kun</a></div>
+                            <div class="post-on font-meta">
+                                <span>17 giờ trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-mairimashita-iruma-kun/chuong-229">Chapter 229</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-cac-chom-sao-chi-chu-y-minh-toi.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/cac-chom-sao-chi-chu-y-minh-toi.jpg" alt="Các Chòm Sao Chỉ Chú Ý Mình Tôi">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-cac-chom-sao-chi-chu-y-minh-toi.html">Các Chòm Sao Chỉ Chú Ý Mình Tôi</a></div>
+                            <div class="post-on font-meta">
+                                <span>12 giờ trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-cac-chom-sao-chi-chu-y-minh-toi/chuong-29">Chapter 29</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="https://saytruyen.net/truyen-dang-nhap-murim.html">
+                                <img width="125" height="180" src="https://saytruyen.net/storage/images/cover/a04e9968598be9acb98a21f950f31d5c.jpg" alt="Đăng nhập Murim">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold"><a href="https://saytruyen.net/truyen-dang-nhap-murim.html">Đăng nhập Murim</a></div>
+                            <div class="post-on font-meta">
+                                <span>16 giờ trước</span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    <a href="https://saytruyen.net/truyen-dang-nhap-murim/chuong-89">Chapter 89</a>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
         </div>
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script>
-            jQuery('body').append('<div id="fb-root"></div>');
-            window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '877174926563381',
-                    cookie: true,
-                    xfbml: true,
-                    version: 'v8.0'
-                });
-            };
-            _loadFbSDk = function () {
-                (function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/vi_VN/sdk.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-            }
-            jQuery(window).load(function () {
-                setTimeout("_loadFbSDk()", 100);
-            });
-        </script>
-        <script type='text/javascript' id='rocket-browser-checker-js-after'>
-            "use strict";
-            var _createClass = function () {
-                function defineProperties(target, props) {
-                    for (var i = 0; i < props.length; i++) {
-                        var descriptor = props[i];
-                        descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor)
-                    }
-                }
-                return function (Constructor, protoProps, staticProps) {
-                    return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor
-                }
-            }();
-
-            function _classCallCheck(instance, Constructor) {
-                if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function")
-            }
-            var RocketBrowserCompatibilityChecker = function () {
-                function RocketBrowserCompatibilityChecker(options) {
-                    _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options
-                }
-                return _createClass(RocketBrowserCompatibilityChecker, [{
-                    key: "_checkPassiveOption",
-                    value: function (self) {
-                        try {
-                            var options = {
-                                get passive() {
-                                    return !(self.passiveSupported = !0)
+    </div>
+    <div class="site-content">
+        <div class="container" style="margin-top: 50px">
+            <div class="row ">
+                <div class="main-col col-md-8 col-sm-8">
+                    <div class="c-blog__heading style-2 font-heading ">
+                        <h2 class="h4">
+                            <i class="icon ion-md-star"></i> Truyện Mới Cập Nhật
+                        </h2>
+                    </div>
+                    <div class="manga-content">
+                        <div class="row px-2 list-item">
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-area-no-kishi.html" title="Area No Kishi">
+                                            <img width="175" height="238" class="img-responsive" src="https://saytruyen.net/storage/images/cover/area-no-kishi.jpg" title="Area No Kishi" alt="area-no-kishi">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-area-no-kishi.html">Area No Kishi</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-area-no-kishi/chuong-149.5" class="btn-link"> Chapter 149.5 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 phút trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-sac-do-long-den-va-yeu-ma.html" title="Sắc Đỏ, Lồng Đèn Và Yêu Ma">
+                                            <img width="175" height="238" class="img-responsive" src="https://saytruyen.net/storage/images/cover/6199f168017d5sac_do.jpg" title="Sắc Đỏ, Lồng Đèn Và Yêu Ma" alt="sac-do-long-den-va-yeu-ma">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-sac-do-long-den-va-yeu-ma.html">Sắc Đỏ, Lồng Đèn Và Yêu Ma</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-sac-do-long-den-va-yeu-ma/chuong-40" class="btn-link"> Chapter 40 </a>
+                                                </span>
+                                                <span class="post-on font-meta">8 phút trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-kare-to-kanojo-no-sentaku.html" title="Kare to Kanojo no Sentaku">
+                                            <img width="175" height="238" class="img-responsive" src="https://saytruyen.net/storage/images/cover/40373edb67e6267a926b58a9fe97b78b.jpg" title="Kare to Kanojo no Sentaku" alt="kare-to-kanojo-no-sentaku">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-kare-to-kanojo-no-sentaku.html">Kare to Kanojo no Sentaku</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-kare-to-kanojo-no-sentaku/chuong-5" class="btn-link"> Chapter 5 </a>
+                                                </span>
+                                                <span class="post-on font-meta">1 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-pha-bo-gioi-han.html" title="Phá Bỏ Giới Hạn">
+                                            <img width="175" height="238" class="img-responsive" src="https://saytruyen.net/storage/images/cover/effe004ef2fec1dfaec9bc981380ed99.jpg" title="Phá Bỏ Giới Hạn" alt="pha-bo-gioi-han">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-pha-bo-gioi-han.html">Phá Bỏ Giới Hạn</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-pha-bo-gioi-han/chuong-57" class="btn-link"> Chapter 57 </a>
+                                                </span>
+                                                <span class="post-on font-meta">1 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-khat-vong-troi-day.html" title="Khát Vọng Trỗi Dậy">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/khat-vong-troi-day.png" title="Khát Vọng Trỗi Dậy" alt="khat-vong-troi-day">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-khat-vong-troi-day.html">Khát Vọng Trỗi Dậy</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-khat-vong-troi-day/chuong-84" class="btn-link"> Chapter 84 </a>
+                                                </span>
+                                                <span class="post-on font-meta">1 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-phi-loi-dao.html" title="Phi Lôi Đạo">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/053d9482cf83229484686a1d4fb3bddb.jpg" title="Phi Lôi Đạo" alt="phi-loi-dao">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-phi-loi-dao.html">Phi Lôi Đạo</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-phi-loi-dao/chuong-99" class="btn-link"> Chapter 99 </a>
+                                                </span>
+                                                <span class="post-on font-meta">1 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-toi-la-nguoi-choi-leo-thap-mot-minh.html" title="Tôi là người chơi leo tháp một mình">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/toi-la-nguoi-choi-leo-thap-mot-minh.png" title="Tôi là người chơi leo tháp một mình" alt="toi-la-nguoi-choi-leo-thap-mot-minh">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-toi-la-nguoi-choi-leo-thap-mot-minh.html">Tôi là người chơi leo tháp một mình</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-toi-la-nguoi-choi-leo-thap-mot-minh/chuong-85" class="btn-link"> Chapter 85 </a>
+                                                </span>
+                                                <span class="post-on font-meta">1 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-chuyen-tinh-thanh-xuan-bi-hai-cua-toi-qua-nhien-la-sai-lam.html" title="Chuyện Tình Thanh Xuân Bi Hài Của Tôi Quả Nhiên Là Sai Lầm">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/975d2287812de440251e61226715b565.jpg" title="Chuyện Tình Thanh Xuân Bi Hài Của Tôi Quả Nhiên Là Sai Lầm" alt="chuyen-tinh-thanh-xuan-bi-hai-cua-toi-qua-nhien-la-sai-lam">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-chuyen-tinh-thanh-xuan-bi-hai-cua-toi-qua-nhien-la-sai-lam.html">Chuyện Tình Thanh Xuân Bi Hài Của Tôi Quả Nhiên Là Sai Lầm</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-chuyen-tinh-thanh-xuan-bi-hai-cua-toi-qua-nhien-la-sai-lam/chuong-97" class="btn-link"> Chapter 97 </a>
+                                                </span>
+                                                <span class="post-on font-meta">3 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-blue-lock-tien-dao.html" title="TIỀN ĐẠO SỐ 1">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/blue-lock.png" title="TIỀN ĐẠO SỐ 1" alt="blue-lock-tien-dao">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-blue-lock-tien-dao.html">TIỀN ĐẠO SỐ 1</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-blue-lock-tien-dao/chuong-152" class="btn-link"> Chapter 152 </a>
+                                                </span>
+                                                <span class="post-on font-meta">3 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-nguyen-ton.html" title="Nguyên Tôn">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/nguyen-ton.png" title="Nguyên Tôn" alt="nguyen-ton">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-nguyen-ton.html">Nguyên Tôn</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-nguyen-ton/chuong-363" class="btn-link"> Chapter 363 </a>
+                                                </span>
+                                                <span class="post-on font-meta">3 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-phap-su-hang-b-nhanh-nhat-the-gioi.html" title="Pháp Sư Hạng B Nhanh Nhất Thế Giới">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/phap-su-hang-b-nhanh-nhat-the-gioi.jpg" title="Pháp Sư Hạng B Nhanh Nhất Thế Giới" alt="phap-su-hang-b-nhanh-nhat-the-gioi">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-phap-su-hang-b-nhanh-nhat-the-gioi.html">Pháp Sư Hạng B Nhanh Nhất Thế Giới</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-phap-su-hang-b-nhanh-nhat-the-gioi/chuong-9" class="btn-link"> Chapter 9 </a>
+                                                </span>
+                                                <span class="post-on font-meta">3 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-casinogui.html" title="CasinoGui">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/casinogui.png" title="CasinoGui" alt="casinogui">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-casinogui.html">CasinoGui</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-casinogui/chuong-50" class="btn-link"> Chapter 50 </a>
+                                                </span>
+                                                <span class="post-on font-meta">3 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue.html" title="Bạn Học Của Tôi Là Lính Đánh Thuê">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/f2939ee4ac99a85fb929931f5e9e4c84.jpg" title="Bạn Học Của Tôi Là Lính Đánh Thuê" alt="ban-hoc-cua-toi-la-linh-danh-thue">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue.html">Bạn Học Của Tôi Là Lính Đánh Thuê</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue/chuong-60" class="btn-link"> Chapter 60 </a>
+                                                </span>
+                                                <span class="post-on font-meta">3 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-to-se-giai-dap-bi-an-cua-cau.html" title="Tớ sẽ giải đáp bí ẩn của cậu">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/6196b922d8392bia.jpg" title="Tớ sẽ giải đáp bí ẩn của cậu" alt="to-se-giai-dap-bi-an-cua-cau">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-to-se-giai-dap-bi-an-cua-cau.html">Tớ sẽ giải đáp bí ẩn của cậu</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-to-se-giai-dap-bi-an-cua-cau/chuong-5.1" class="btn-link"> Chapter 5.1 </a>
+                                                </span>
+                                                <span class="post-on font-meta">4 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-ban-gai-cua-toi-la-rong.html" title="Bạn gái của tôi là rồng">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/6199b182a283123d61e8010b297d5ce64323515ab0a9a.jpg" title="Bạn gái của tôi là rồng" alt="ban-gai-cua-toi-la-rong">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-ban-gai-cua-toi-la-rong.html">Bạn gái của tôi là rồng</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-ban-gai-cua-toi-la-rong/chuong-4" class="btn-link"> Chapter 4 </a>
+                                                </span>
+                                                <span class="post-on font-meta">4 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-chu-gioi-tan-the-online.html" title="Chư giới - Tận thế online">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/933da470b8586f1a4b7cbb72e77f7999.jpg" title="Chư giới - Tận thế online" alt="chu-gioi-tan-the-online">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-chu-gioi-tan-the-online.html">Chư giới - Tận thế online</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-chu-gioi-tan-the-online/chuong-85" class="btn-link"> Chapter 85 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-thien-chau-bien.html" title="Thiên Châu Biến">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/thien-chau-bien.png" title="Thiên Châu Biến" alt="thien-chau-bien">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-thien-chau-bien.html">Thiên Châu Biến</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-thien-chau-bien/chuong-65" class="btn-link"> Chapter 65 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-trong-sinh-khi-thieu-quy-lai.html" title="Trọng Sinh Khí Thiếu Quy Lai">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/ed86f3ca3d5d0125c30f5314ff74e283.jpg" title="Trọng Sinh Khí Thiếu Quy Lai" alt="trong-sinh-khi-thieu-quy-lai">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-trong-sinh-khi-thieu-quy-lai.html">Trọng Sinh Khí Thiếu Quy Lai</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-trong-sinh-khi-thieu-quy-lai/chuong-241" class="btn-link"> Chapter 241 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-mot-the-gioi-khac-noi-con-nguoi-manh-nhat.html" title="Một Thế Giới Khác Nơi Con Người Mạnh Nhất">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/mot-the-gioi-khac-noi-con-nguoi-manh-nhat.png" title="Một Thế Giới Khác Nơi Con Người Mạnh Nhất" alt="mot-the-gioi-khac-noi-con-nguoi-manh-nhat">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-mot-the-gioi-khac-noi-con-nguoi-manh-nhat.html">Một Thế Giới Khác Nơi Con Người Mạnh Nhất</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-mot-the-gioi-khac-noi-con-nguoi-manh-nhat/chuong-35" class="btn-link"> Chapter 35 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-tu-tien-o-the-gioi-sieu-nang-luc.html" title="Tu Tiên Ở Thế Giới Siêu Năng Lực">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/tu-tien-o-the-gioi-sieu-nang-luc.jpg" title="Tu Tiên Ở Thế Giới Siêu Năng Lực" alt="tu-tien-o-the-gioi-sieu-nang-luc">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-tu-tien-o-the-gioi-sieu-nang-luc.html">Tu Tiên Ở Thế Giới Siêu Năng Lực</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-tu-tien-o-the-gioi-sieu-nang-luc/chuong-12" class="btn-link"> Chapter 12 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-dragon-ball-super.html" title="Bảy Viên Ngọc Rồng Siêu Cấp">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/dragon-ball-super.png" title="Bảy Viên Ngọc Rồng Siêu Cấp" alt="dragon-ball-super">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-dragon-ball-super.html">Bảy Viên Ngọc Rồng Siêu Cấp</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-dragon-ball-super/chuong-78" class="btn-link"> Chapter 78 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-shokuryou-jinrui-re-starving-revelation.html" title="Shokuryou Jinrui Re: Starving Re:velation">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/shokuryou-jinrui-re-starving-revelation.jpg" title="Shokuryou Jinrui Re: Starving Re:velation" alt="shokuryou-jinrui-re-starving-revelation">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-shokuryou-jinrui-re-starving-revelation.html">Shokuryou Jinrui Re: Starving Re:velation</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-shokuryou-jinrui-re-starving-revelation/chuong-14.1" class="btn-link"> Chapter 14.1 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-xuyen-khong-vao-the-gioi-nu-cuong.html" title="Xuyên Không Vào Thế Giới Nữ Cường">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/xuyen-khong-vao-the-gioi-nu-cuong.png" title="Xuyên Không Vào Thế Giới Nữ Cường" alt="xuyen-khong-vao-the-gioi-nu-cuong">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-xuyen-khong-vao-the-gioi-nu-cuong.html">Xuyên Không Vào Thế Giới Nữ Cường</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-xuyen-khong-vao-the-gioi-nu-cuong/chuong-264" class="btn-link"> Chapter 264 </a>
+                                                </span>
+                                                <span class="post-on font-meta">5 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-stalker-x-stalker.html" title="Stalker X Stalker">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/stalker-x-stalker.png" title="Stalker X Stalker" alt="stalker-x-stalker">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-stalker-x-stalker.html">Stalker X Stalker</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-stalker-x-stalker/chuong-44" class="btn-link"> Chapter 44 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-noumin-kanren-no-sukiru-bakka-agetetara-nazeka.html" title="Noumin Kanren No Sukiru Bakka Agetetara Nazeka">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/noumin-kanren-no-sukiru-bakka-agetetara-nazeka.jpg" title="Noumin Kanren No Sukiru Bakka Agetetara Nazeka" alt="noumin-kanren-no-sukiru-bakka-agetetara-nazeka">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-noumin-kanren-no-sukiru-bakka-agetetara-nazeka.html">Noumin Kanren No Sukiru Bakka Agetetara Nazeka</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-noumin-kanren-no-sukiru-bakka-agetetara-nazeka/chuong-7" class="btn-link"> Chapter 7 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-skip-to-loafer.html" title="Skip to Loafer">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/skip-to-loafer.png" title="Skip to Loafer" alt="skip-to-loafer">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-skip-to-loafer.html">Skip to Loafer</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-skip-to-loafer/chuong-32" class="btn-link"> Chapter 32 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-ta-co-999-loai-di-nang.html" title="Ta Có 999 Loại Dị Năng">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/ta-co-999-loai-di-nang.png" title="Ta Có 999 Loại Dị Năng" alt="ta-co-999-loai-di-nang">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-ta-co-999-loai-di-nang.html">Ta Có 999 Loại Dị Năng</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-ta-co-999-loai-di-nang/chuong-31" class="btn-link"> Chapter 31 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-ta-co-mot-son-trai.html" title="Ta Có Một Sơn Trại">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/582f458d527087372db22072c1461db4.jpg" title="Ta Có Một Sơn Trại" alt="ta-co-mot-son-trai">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-ta-co-mot-son-trai.html">Ta Có Một Sơn Trại</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-ta-co-mot-son-trai/chuong-160" class="btn-link"> Chapter 160 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-ta-bi-nhot-tai-cung-mot-ngay-muoi-van-nam.html" title="Ta Bị Nhốt Tại Cùng Một Ngày Mười Vạn Năm">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/456be6cf52e175eb6d977cc37b2a66df.jpg" title="Ta Bị Nhốt Tại Cùng Một Ngày Mười Vạn Năm" alt="ta-bi-nhot-tai-cung-mot-ngay-muoi-van-nam">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-ta-bi-nhot-tai-cung-mot-ngay-muoi-van-nam.html">Ta Bị Nhốt Tại Cùng Một Ngày Mười Vạn Năm</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-ta-bi-nhot-tai-cung-mot-ngay-muoi-van-nam/chuong-83" class="btn-link"> Chapter 83 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-trong-sinh-tieu-y-tien.html" title="Trọng Sinh Tiểu Y Tiên">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/trong-sinh-tieu-y-tien.png" title="Trọng Sinh Tiểu Y Tiên" alt="trong-sinh-tieu-y-tien">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-trong-sinh-tieu-y-tien.html">Trọng Sinh Tiểu Y Tiên</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-trong-sinh-tieu-y-tien/chuong-160" class="btn-link"> Chapter 160 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-dang-nu.html" title="Đằng Nữ">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/a2dd567e8b3fcaa292135ebf5df16ba6.jpg" title="Đằng Nữ" alt="dang-nu">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-dang-nu.html">Đằng Nữ</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-dang-nu/chuong-74" class="btn-link"> Chapter 74 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-hotboy-quoc-dan-la-nu.html" title="Hotboy Quốc Dân Là Nữ">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/hotboy-quoc-dan-la-nu.png" title="Hotboy Quốc Dân Là Nữ" alt="hotboy-quoc-dan-la-nu">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-hotboy-quoc-dan-la-nu.html">Hotboy Quốc Dân Là Nữ</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-hotboy-quoc-dan-la-nu/chuong-223" class="btn-link"> Chapter 223 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-hau-cung-cua-ta-dua-vao-rut-the.html" title="Hậu Cung Của Ta Dựa Vào Rút Thẻ">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/3eb21725d7c2876f1cd70c177c402ee0.jpg" title="Hậu Cung Của Ta Dựa Vào Rút Thẻ" alt="hau-cung-cua-ta-dua-vao-rut-the">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-hau-cung-cua-ta-dua-vao-rut-the.html">Hậu Cung Của Ta Dựa Vào Rút Thẻ</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-hau-cung-cua-ta-dua-vao-rut-the/chuong-133" class="btn-link"> Chapter 133 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-trong-sinh-do-thi-tu-tien.html" title="Trọng Sinh Đô Thị Tu Tiên">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/trong-sinh-do-thi-tu-tien.png" title="Trọng Sinh Đô Thị Tu Tiên" alt="trong-sinh-do-thi-tu-tien">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-trong-sinh-do-thi-tu-tien.html">Trọng Sinh Đô Thị Tu Tiên</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-trong-sinh-do-thi-tu-tien/chuong-674" class="btn-link"> Chapter 674 </a>
+                                                </span>
+                                                <span class="post-on font-meta">6 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-chua-te-chi-lo.html" title="Chúa Tể Chi Lộ">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/chua-te-chi-lo.jpg" title="Chúa Tể Chi Lộ" alt="chua-te-chi-lo">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-chua-te-chi-lo.html">Chúa Tể Chi Lộ</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-chua-te-chi-lo/chuong-34" class="btn-link"> Chapter 34 </a>
+                                                </span>
+                                                <span class="post-on font-meta">11 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat.html" title="Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat.jpg" title="Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất" alt="co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat.html">Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat/chuong-7" class="btn-link"> Chapter 7 </a>
+                                                </span>
+                                                <span class="post-on font-meta">12 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-party-kara-tsuihou-sareta-sono-chiyushi-jitsu-wa-saikyou-nitsuki.html" title="Party Kara Tsuihou Sareta Sono Chiyushi, Jitsu Wa Saikyou Nitsuki">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/party-kara-tsuihou-sareta-sono-chiyushi-jitsu-wa-saikyou-nitsuki.jpg" title="Party Kara Tsuihou Sareta Sono Chiyushi, Jitsu Wa Saikyou Nitsuki" alt="party-kara-tsuihou-sareta-sono-chiyushi-jitsu-wa-saikyou-nitsuki">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-party-kara-tsuihou-sareta-sono-chiyushi-jitsu-wa-saikyou-nitsuki.html">Party Kara Tsuihou Sareta Sono Chiyushi, Jitsu Wa Saikyou Nitsuki</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-party-kara-tsuihou-sareta-sono-chiyushi-jitsu-wa-saikyou-nitsuki/chuong-7" class="btn-link"> Chapter 7 </a>
+                                                </span>
+                                                <span class="post-on font-meta">12 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-tro-thanh-nguoi-manh-nhat-trong-the-gioi-game.html" title="Trở Thành Người Mạnh Nhất Trong Thế Giới Game">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/tro-thanh-nguoi-manh-nhat-trong-the-gioi-game.jpg" title="Trở Thành Người Mạnh Nhất Trong Thế Giới Game" alt="tro-thanh-nguoi-manh-nhat-trong-the-gioi-game">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-tro-thanh-nguoi-manh-nhat-trong-the-gioi-game.html">Trở Thành Người Mạnh Nhất Trong Thế Giới Game</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-tro-thanh-nguoi-manh-nhat-trong-the-gioi-game/chuong-1" class="btn-link"> Chapter 1 </a>
+                                                </span>
+                                                <span class="post-on font-meta">12 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-van-co-than-de.html" title="Vạn Cổ Thần Đế">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/van-co-than-de.jpg" title="Vạn Cổ Thần Đế" alt="van-co-than-de">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-van-co-than-de.html">Vạn Cổ Thần Đế</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-van-co-than-de/chuong-8" class="btn-link"> Chapter 8 </a>
+                                                </span>
+                                                <span class="post-on font-meta">12 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="https://saytruyen.net/truyen-thien-ma-phi-thang-truyen.html" title="Thiên Ma Phi Thăng Truyện">
+                                            <img width="175" height="238" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/thien-ma-phi-thang-truyen.jpg" title="Thiên Ma Phi Thăng Truyện" alt="thien-ma-phi-thang-truyen">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                <a href="https://saytruyen.net/truyen-thien-ma-phi-thang-truyen.html">Thiên Ma Phi Thăng Truyện</a>
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    <a href="https://saytruyen.net/truyen-thien-ma-phi-thang-truyen/chuong-11" class="btn-link"> Chapter 11 </a>
+                                                </span>
+                                                <span class="post-on font-meta">12 giờ trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pager">
+                                <li class="disabled"><span>«</span></li>
+                                <li class="active"><span>1</span></li>
+                                <li><a href="https://saytruyen.net?page=2">2</a></li>
+                                <li><a href="https://saytruyen.net?page=3">3</a></li>
+                                <li><span>...</span></li>
+                                <li class="hidden-xs"><a href="https://saytruyen.net?page=129">129</a></li>
+                                <li><a href="https://saytruyen.net?page=2" rel="next">»</a></li>
+                            </ul>
+                            <style type="text/css">
+                                .pager {
+                                    margin: 0;
+                                    padding: 0;
+                                    clear: both;
+                                    width: 100%;
+                                    text-align: center;
                                 }
-                            };
-                            window.addEventListener("test", null, options), window.removeEventListener("test", null, options)
-                        } catch (err) {
-                            self.passiveSupported = !1
-                        }
-                    }
-                }, {
-                    key: "initRequestIdleCallback",
-                    value: function () {
-                        !1 in window && (window.requestIdleCallback = function (cb) {
-                            var start = Date.now();
-                            return setTimeout(function () {
-                                cb({
-                                    didTimeout: !1,
-                                    timeRemaining: function () {
-                                        return Math.max(0, 50 - (Date.now() - start))
+
+                                ul.pager li {
+                                    display: inline-block;
+                                    list-style: none;
+                                    margin: 0 2px;
+                                }
+
+                                    ul.pager li:hover a {
+                                        background-color: #f47268;
                                     }
-                                })
-                            }, 1)
-                        }), !1 in window && (window.cancelIdleCallback = function (id) {
-                            return clearTimeout(id)
-                        })
-                    }
-                }, {
-                    key: "isDataSaverModeOn",
-                    value: function () {
-                        return "connection" in navigator && !0 === navigator.connection.saveData
-                    }
-                }, {
-                    key: "supportsLinkPrefetch",
-                    value: function () {
-                        var elem = document.createElement("link");
-                        return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype
-                    }
-                }, {
-                    key: "isSlowConnection",
-                    value: function () {
-                        return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType)
-                    }
-                }]), RocketBrowserCompatibilityChecker
-            }();
-        </script>
-        <script type='text/javascript' id='rocket-preload-links-js-after'>
-            (function () {
-                "use strict";
-                var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-                    return typeof e
-                } : function (e) {
-                    return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-                },
-                    e = function () {
-                        function i(e, t) {
-                            for (var n = 0; n < t.length; n++) {
-                                var i = t[n];
-                                i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                            }
-                        }
-                        return function (e, t, n) {
-                            return t && i(e.prototype, t), n && i(e, n), e
-                        }
-                    }();
 
-                function i(e, t) {
-                    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                }
-                var t = function () {
-                    function n(e, t) {
-                        i(this, n), this.browser = e, this.config = t, this.options = this.browser.options, this.prefetched = new Set, this.eventTime = null, this.threshold = 1111, this.numOnHover = 0
-                    }
-                    return e(n, [{
-                        key: "init",
-                        value: function () {
-                            !this.browser.supportsLinkPrefetch() || this.browser.isDataSaverModeOn() || this.browser.isSlowConnection() || (this.regex = {
-                                excludeUris: RegExp(this.config.excludeUris, "i"),
-                                images: RegExp(".(" + this.config.imageExt + ")$", "i"),
-                                fileExt: RegExp(".(" + this.config.fileExt + ")$", "i")
-                            }, this._initListeners(this))
-                        }
-                    }, {
-                        key: "_initListeners",
-                        value: function (e) {
-                            -1 < this.config.onHoverDelay && document.addEventListener("mouseover", e.listener.bind(e), e.listenerOptions), document.addEventListener("mousedown", e.listener.bind(e), e.listenerOptions), document.addEventListener("touchstart", e.listener.bind(e), e.listenerOptions)
-                        }
-                    }, {
-                        key: "listener",
-                        value: function (e) {
-                            var t = e.target.closest("a"),
-                                n = this._prepareUrl(t);
-                            if (null !== n) switch (e.type) {
-                                case "mousedown":
-                                case "touchstart":
-                                    this._addPrefetchLink(n);
-                                    break;
-                                case "mouseover":
-                                    this._earlyPrefetch(t, n, "mouseout")
-                            }
-                        }
-                    }, {
-                        key: "_earlyPrefetch",
-                        value: function (t, e, n) {
-                            var i = this,
-                                r = setTimeout(function () {
-                                    if (r = null, 0 === i.numOnHover) setTimeout(function () {
-                                        return i.numOnHover = 0
-                                    }, 1e3);
-                                    else if (i.numOnHover > i.config.rateThrottle) return;
-                                    i.numOnHover++, i._addPrefetchLink(e)
-                                }, this.config.onHoverDelay);
-                            t.addEventListener(n, function e() {
-                                t.removeEventListener(n, e, {
-                                    passive: !0
-                                }), null !== r && (clearTimeout(r), r = null)
-                            }, {
-                                passive: !0
-                            })
-                        }
-                    }, {
-                        key: "_addPrefetchLink",
-                        value: function (i) {
-                            return this.prefetched.add(i.href), new Promise(function (e, t) {
-                                var n = document.createElement("link");
-                                n.rel = "prefetch", n.href = i.href, n.onload = e, n.onerror = t, document.head.appendChild(n)
-                            }).catch(function () { })
-                        }
-                    }, {
-                        key: "_prepareUrl",
-                        value: function (e) {
-                            if (null === e || "object" !== (void 0 === e ? "undefined" : r(e)) || !1 in e || -1 === ["http:", "https:"].indexOf(e.protocol)) return null;
-                            var t = e.href.substring(0, this.config.siteUrl.length),
-                                n = this._getPathname(e.href, t),
-                                i = {
-                                    original: e.href,
-                                    protocol: e.protocol,
-                                    origin: t,
-                                    pathname: n,
-                                    href: t + n
-                                };
-                            return this._isLinkOk(i) ? i : null
-                        }
-                    }, {
-                        key: "_getPathname",
-                        value: function (e, t) {
-                            var n = t ? e.substring(this.config.siteUrl.length) : e;
-                            return n.startsWith("/") || (n = "/" + n), this._shouldAddTrailingSlash(n) ? n + "/" : n
-                        }
-                    }, {
-                        key: "_shouldAddTrailingSlash",
-                        value: function (e) {
-                            return this.config.usesTrailingSlash && !e.endsWith("/") && !this.regex.fileExt.test(e)
-                        }
-                    }, {
-                        key: "_isLinkOk",
-                        value: function (e) {
-                            return null !== e && "object" === (void 0 === e ? "undefined" : r(e)) && (!this.prefetched.has(e.href) && e.origin === this.config.siteUrl && -1 === e.href.indexOf("?") && -1 === e.href.indexOf("#") && !this.regex.excludeUris.test(e.href) && !this.regex.images.test(e.href))
-                        }
-                    }], [{
-                        key: "run",
-                        value: function () {
-                            "undefined" != typeof RocketPreloadLinksConfig && new n(new RocketBrowserCompatibilityChecker({
-                                capture: !0,
-                                passive: !0
-                            }), RocketPreloadLinksConfig).init()
-                        }
-                    }]), n
-                }();
-                t.run();
-            }());
-        </script>
-        <script>
-            window.lazyLoadOptions = {
-                elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",
-                data_src: "lazy-src",
-                data_srcset: "lazy-srcset",
-                data_sizes: "lazy-sizes",
-                class_loading: "lazyloading",
-                class_loaded: "lazyloaded",
-                threshold: 300,
-                callback_loaded: function (element) {
-                    if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") {
-                        if (element.classList.contains("lazyloaded")) {
-                            if (typeof window.jQuery != "undefined") {
-                                if (jQuery.fn.fitVids) {
-                                    jQuery(element).parent().fitVids()
-                                }
-                            }
-                        }
-                    }
-                }
-            };
-            window.addEventListener('LazyLoad::Initialized', function (e) {
-                var lazyLoadInstance = e.detail.instance;
-                if (window.MutationObserver) {
-                    var observer = new MutationObserver(function (mutations) {
-                        var image_count = 0;
-                        var iframe_count = 0;
-                        var rocketlazy_count = 0;
-                        mutations.forEach(function (mutation) {
-                            for (i = 0; i < mutation.addedNodes.length; i++) {
-                                if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
-                                    continue
-                                }
-                                if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
-                                    continue
-                                }
-                                images = mutation.addedNodes[i].getElementsByTagName('img');
-                                is_image = mutation.addedNodes[i].tagName == "IMG";
-                                iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
-                                is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
-                                rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
-                                image_count += images.length;
-                                iframe_count += iframes.length;
-                                rocketlazy_count += rocket_lazy.length;
-                                if (is_image) {
-                                    image_count += 1
-                                }
-                                if (is_iframe) {
-                                    iframe_count += 1
-                                }
-                            }
-                        });
-                        if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) {
-                            lazyLoadInstance.update()
-                        }
-                    });
-                    var b = document.getElementsByTagName("body")[0];
-                    var config = {
-                        childList: !0,
-                        subtree: !0
-                    };
-                    observer.observe(b, config)
-                }
-            }, !1)
-        </script>
-        <script data-no-minify="1" async src="../websudo/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script>
-        <script>
-            function lazyLoadThumb(e) {
-                var t = '<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',
-                    a = '<div class="play"></div>';
-                return t.replace("ID", e) + a
-            }
+                                    ul.pager li:hover a {
+                                        color: white;
+                                    }
 
-            function lazyLoadYoutubeIframe() {
-                var e = document.createElement("iframe"),
-                    t = "ID?autoplay=1";
-                t += 0 === this.dataset.query.length ? '' : '&' + this.dataset.query;
-                e.setAttribute("src", t.replace("ID", this.dataset.src)), e.setAttribute("frameborder", "0"), e.setAttribute("allowfullscreen", "1"), e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"), this.parentNode.replaceChild(e, this)
-            }
-            document.addEventListener("DOMContentLoaded", function () {
-                var e, t, a = document.getElementsByClassName("rll-youtube-player");
-                for (t = 0; t < a.length; t++) e = document.createElement("div"), e.setAttribute("data-id", a[t].dataset.id), e.setAttribute("data-query", a[t].dataset.query), e.setAttribute("data-src", a[t].dataset.src), e.innerHTML = lazyLoadThumb(a[t].dataset.id), e.onclick = lazyLoadYoutubeIframe, a[t].appendChild(e)
-            });
-        </script>
+                                    ul.pager li.active span {
+                                        display: block;
+                                        padding: 8px 15px;
+                                        background-color: #f47268;
+                                        color: white;
+                                    }
+
+                                    ul.pager li a {
+                                        color: #898989;
+                                        text-decoration: none;
+                                        font-weight: 500;
+                                        display: block;
+                                        padding: 8px 15px;
+                                        cursor: pointer;
+                                        background: #ebebeb;
+                                    }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar col-md-4 col-sm-4 ">
+                    <div class="history popular">
+                        <div class="widget-heading">
+                            <h5 class="heading">Lịch sử</h5>
+                        </div>
+                        <div class="widget-content history-content">
+                            <span hidden>https://saytruyen.net/history</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="popular">
+                        <div class="widget-heading">
+                            <h5 class="heading">Truyện Hot</h5>
+                        </div>
+                        <div class="widget-content">
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Bạn Học Của Tôi Là Lính Đánh Thuê" href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/f2939ee4ac99a85fb929931f5e9e4c84.jpg" loading="lazy" title="Bạn Học Của Tôi Là Lính Đánh Thuê" alt="ban-hoc-cua-toi-la-linh-danh-thue">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Bạn Học Của Tôi Là Lính Đánh Thuê" href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue.html">Bạn Học Của Tôi Là Lính Đánh Thuê</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-ban-hoc-cua-toi-la-linh-danh-thue/chuong-60" class="btn-link">Chapter 60</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                3 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Cô gái từ ứng dụng nhắn tin ngẫu nhiên" href="https://saytruyen.net/truyen-co-gai-tu-ung-dung-nhan-tin-ngau-nhien.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/af140f4b6a38ad25270f93f60ab75f8b.jpg" loading="lazy" title="Cô gái từ ứng dụng nhắn tin ngẫu nhiên" alt="co-gai-tu-ung-dung-nhan-tin-ngau-nhien">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Cô gái từ ứng dụng nhắn tin ngẫu nhiên" href="https://saytruyen.net/truyen-co-gai-tu-ung-dung-nhan-tin-ngau-nhien.html">Cô gái từ ứng dụng nhắn tin ngẫu nhiên</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-co-gai-tu-ung-dung-nhan-tin-ngau-nhien/chuong-149" class="btn-link">Chapter 149</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                2 ngày trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Kế Hoạch Chinh Phục Ma Nam Hiện Đại" href="https://saytruyen.net/truyen-ke-hoach-san-ma-nam-thoi-hien-dai.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/84d8ee0c8273adae5c0d4b4e9c0723cb.jpg" loading="lazy" title="Kế Hoạch Chinh Phục Ma Nam Hiện Đại" alt="ke-hoach-san-ma-nam-thoi-hien-dai">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Kế Hoạch Chinh Phục Ma Nam Hiện Đại" href="https://saytruyen.net/truyen-ke-hoach-san-ma-nam-thoi-hien-dai.html">Kế Hoạch Chinh Phục Ma Nam Hiện Đại</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-ke-hoach-san-ma-nam-thoi-hien-dai/chuong-21" class="btn-link">Chapter 21</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                2 ngày trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Sự Trở Lại Của Huyền Thoại" href="https://saytruyen.net/truyen-su-tro-lai-cua-huyen-thoai.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/70a82ee8a99b97fb0d12a4ca43fe4a8b.jpg" loading="lazy" title="Sự Trở Lại Của Huyền Thoại" alt="su-tro-lai-cua-huyen-thoai">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Sự Trở Lại Của Huyền Thoại" href="https://saytruyen.net/truyen-su-tro-lai-cua-huyen-thoai.html">Sự Trở Lại Của Huyền Thoại</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-su-tro-lai-cua-huyen-thoai/chuong-25" class="btn-link">Chapter 25</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                14 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Sự Trở Lại Của Hiệp Sĩ Giáo Vô Song" href="https://saytruyen.net/truyen-su-tro-lai-cua-hiep-si-giao-vo-song.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/22de1429eb1135895f0b939277a2f287.jpg" loading="lazy" title="Sự Trở Lại Của Hiệp Sĩ Giáo Vô Song" alt="su-tro-lai-cua-hiep-si-giao-vo-song">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Sự Trở Lại Của Hiệp Sĩ Giáo Vô Song" href="https://saytruyen.net/truyen-su-tro-lai-cua-hiep-si-giao-vo-song.html">Sự Trở Lại Của Hiệp Sĩ Giáo Vô Song</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-su-tro-lai-cua-hiep-si-giao-vo-song/chuong-26" class="btn-link">Chapter 26</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                14 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Mairimashita! Iruma-Kun" href="https://saytruyen.net/truyen-mairimashita-iruma-kun.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/2a6fc64eae53b99056c0f035bb766c49.jpg" loading="lazy" title="Mairimashita! Iruma-Kun" alt="mairimashita-iruma-kun">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Mairimashita! Iruma-Kun" href="https://saytruyen.net/truyen-mairimashita-iruma-kun.html">Mairimashita! Iruma-Kun</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-mairimashita-iruma-kun/chuong-229" class="btn-link">Chapter 229</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                17 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Các Chòm Sao Chỉ Chú Ý Mình Tôi" href="https://saytruyen.net/truyen-cac-chom-sao-chi-chu-y-minh-toi.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/cac-chom-sao-chi-chu-y-minh-toi.jpg" loading="lazy" title="Các Chòm Sao Chỉ Chú Ý Mình Tôi" alt="cac-chom-sao-chi-chu-y-minh-toi">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Các Chòm Sao Chỉ Chú Ý Mình Tôi" href="https://saytruyen.net/truyen-cac-chom-sao-chi-chu-y-minh-toi.html">Các Chòm Sao Chỉ Chú Ý Mình Tôi</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-cac-chom-sao-chi-chu-y-minh-toi/chuong-29" class="btn-link">Chapter 29</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                12 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Đăng nhập Murim" href="https://saytruyen.net/truyen-dang-nhap-murim.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/a04e9968598be9acb98a21f950f31d5c.jpg" loading="lazy" title="Đăng nhập Murim" alt="dang-nhap-murim">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Đăng nhập Murim" href="https://saytruyen.net/truyen-dang-nhap-murim.html">Đăng nhập Murim</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-dang-nhap-murim/chuong-89" class="btn-link">Chapter 89</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                16 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Chư giới - Tận thế online" href="https://saytruyen.net/truyen-chu-gioi-tan-the-online.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/933da470b8586f1a4b7cbb72e77f7999.jpg" loading="lazy" title="Chư giới - Tận thế online" alt="chu-gioi-tan-the-online">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Chư giới - Tận thế online" href="https://saytruyen.net/truyen-chu-gioi-tan-the-online.html">Chư giới - Tận thế online</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-chu-gioi-tan-the-online/chuong-85" class="btn-link">Chapter 85</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                5 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-item-wrap">
+                                <div class="popular-img widget-thumbnail c-image-hover">
+                                    <a title="Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất" href="https://saytruyen.net/truyen-co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat.html">
+                                        <img width="75" height="106" class="img-responsive lazyload" data-src="https://saytruyen.net/storage/images/cover/co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat.jpg" loading="lazy" title="Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất" alt="co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat">
+                                    </a>
+                                </div>
+                                <div class="popular-content">
+                                    <h5 class="widget-title">
+                                        <a title="Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất" href="https://saytruyen.net/truyen-co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat.html">Có Vẻ Như Kỹ Năng Của Tôi Ở Dị Giới Là Mạnh Nhất</a>
+                                    </h5>
+                                    <div class="list-chapter">
+                                        <div class="chapter-item ">
+                                            <span class="chapter font-meta">
+                                                <a href="https://saytruyen.net/truyen-co-ve-nhu-ky-nang-cua-toi-o-di-gioi-la-manh-nhat/chuong-7" class="btn-link">Chapter 7</a>
+                                            </span>
+                                            <span class="post-on font-meta">
+                                                12 giờ trước
+                                            </span>
+                                        </div>
+                                        <div class="chapter-item ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="widget-view-more" href="#">Xem Thêm Nhiều Truyện</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="go-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+    <input type="hidden" name="_token" id="token" value="iFPOl6ecn8kDzcm8WTufa79g9bJzUwKwBhjfdV2m">
+    <script>
+        let base_url = "https://saytruyen.net";
+        let label_button_no_more = "Hết hàng rồi bạn ơi !!!!";
+        let show_more = "Xem thêm";
+    </script>
+    <script type="text/javascript" src="/assets/js/all.js"></script>
 </body>
+
 </html>
