@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebSUDO</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="c-header__top">
+            <ul class="search-main-menu">
+                <li>
+                    <form id="blog-post-search" class="ajax manga-search-form" action="#" method="get">
+                        <input type="text" placeholder="Search..." name="s" value="" class="manga-search-field ui-autocomplete-input" autocomplete="off" required>
+                        <a href="javascript:void(0)" class="close-form-search"><i class="icon" ><img src="https://img.icons8.com/ios-glyphs/30/000000/xbox-x.png" /></i></a>
+                        <button type="submit"><img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" /></i></button>
+                        <div class="loader-inner line-scale">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="ui-menu" style="display: none;"></div>
+                    </form>
+                </li>
+            </ul>
+            <div class="main-navigation style-1 ">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="main-navigation_wrap">
+                                <div class="main-menu">
+                                    <ul class="nav navbar-nav main-navbar">
+                                        <li>
+                                            <a asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="" asp-controller="Home" asp-action="ThongTinTruyen">Thể Loại</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Hoàn Thành</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lịch Sử</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
+                                        </li>
+                                        <li class="up-manga">
+                                            <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="search-navigation search-sidebar">
+                                    <ul class="main-menu-search nav-menu">
+                                        <li class="menu-search">
+                                            <a href="javascript:;" class="open-search-main-menu">
+                                                <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" />
+                                            </a>
+                                            <ul class="search-main-menu">
+                                                <li>
+                                                    <form class="manga-search-form search-form ajax" action="#" method="get">
+                                                        <input class="manga-search-field ui-autocomplete-input" type="text" placeholder="Search..." name="s" value="" autocomplete="off">
+                                                        <input type="hidden" name="post_type" value="wp-manga"> <i class="icon ion-ios-search"></i>
+                                                        <div class="loader-inner ball-clip-rotate-multiple">
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                        <input type="submit" value="Search">
+                                                        <ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-togle__menu">
+                                    <button type="button" class="menu_icon__open">
+                                        <span></span> <span></span> <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu off-canvas">
+            <div class="close-nav">
+                <button class="menu_icon__close">
+                    <span></span> <span></span>
+                </button>
+            </div>
+            <div class="c-modal_item">
+
+                <span class="c-modal_sign-in">
+                    <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng Nhập</a>
+                </span>
+                <span class="c-modal_sign-up">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng Kí</a>
+                </span>
+            </div>
+            <nav class="off-menu">
+                <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                    <li>
+                        <a href="#" class="menu-link  main-menu-link"> Thể Loại </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link  main-menu-link"> Hoàn Thành </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link  main-menu-link"> Lịch Sử </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sub-header-nav with-border">
+            <div class="container">
+                <div class="sub-nav_content">
+                    <ul class="sub-nav_list list-inline second-menu">
+                        <li>
+                            <a href="#">Manhwa</a>
+                        </li>
+                        <li>
+                            <a href="#">Manga</a>
+                        </li>
+                        <li>
+                            <a href="#">Manhua</a>
+                        </li>
+                        <li>
+                            <a href="#">Romance</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c-modal_item">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng Nhập</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng Kí</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wp-manga-section">
+        <input type="hidden" name="bookmarking" value="0">
+        <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="login" class="login">
+                            <h3>
+                                <a href="https://saytruyen.net" title="VipToon" tabindex="-1">Đăng Nhập</a>
+                            </h3>
+                            <p class="message login"></p>
+                            <meta name="robots" content="max-image-preview:large">
+                            <link rel="dns-prefetch" href="https://s.w.org/">
+                            <form name="loginform" id="loginform" method="post">
+                                <p>
+                                    <label>Email * <br> <input type="text" name="log" class="input user_login" value="" size="20">
+</label>
+                                </p>
+                                <p>
+                                    <label>Mật Khẩu * <br> <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20">
+</label>
+                                </p>
+                                <p>
+                                </p>
+                                <p class="forgetmenot">
+                                    <label>
+<input name="rememberme" type="checkbox" id="rememberme" value="forever">Nhớ thông tin
+</label>
+                                </p>
+                                <input hidden id="login_url" value="https://saytruyen.net/user/login">
+                                <input hidden id="register_url" value="https://saytruyen.net/user/register">
+                                <input hidden id="reset_url" value="https://saytruyen.net/admin/password/email">
+                                <p class="submit">
+                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In">
+                                    <input type="hidden" name="testcookie" value="1">
+                                </p>
+                            </form>
+                            <p class="nav">
+                                <a href="javascript:void(0)" class="to-reset">Quên Mật Khẩu?</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="sign-up" class="login">
+                            <h3>
+                                <a href="https://saytruyen.net" title="VipToon" tabindex="-1">Đăng Kí</a>
+                            </h3>
+                            <p class="message register">Đăng Kí Sử Dụng</p>
+                            <form name="registerform" id="registerform" novalidate="novalidate">
+                                <p>
+                                    <label>Tên Đăng Nhập * <br>
+<input type="text" name="user_sign-up" class="input user_login" value="" size="20">
+</label>
+                                </p>
+                                <p>
+                                    <label>Email Địa Chỉ * <br>
+<input type="email" name="email_sign-up" class="input user_email" value="" size="20">
+</label>
+                                </p>
+                                <p>
+                                    <label>Mật Khẩu *<br>
+<input type="password" name="pass_sign-up" autocomplete="" class="input user_pass" value="" size="25">
+</label>
+                                </p>
+                                <p>
+                                </p>
+                                <input type="hidden" name="redirect_to" value="">
+                                <p class="submit">
+                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register">
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="reset" class="login">
+                            <h3>
+                                <a href="javascript:void(0)" class="to-reset">Quên Mật Khẩu?</a>
+                            </h3>
+                            <p class="message reset">Vui lòng nhập email của bạn, bạn sẽ nhận một link qua email để cài đặt lại password</p>
+                            <form name="resetform" id="resetform" method="post">
+                                <p>
+                                    <label>Tên Đăng Nhập Hoặc Email Địa Chỉ <br>
+<input type="text" name="user_reset" id="user_reset" class="input" value="" size="20">
+</label>
+                                </p>
+                                <p class="submit">
+                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password">
+                                    <input type="hidden" name="testcookie" value="1">
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="nav-footer">
+                            <ul class="list-inline">
+                                <li><a href="#">Điều Khoản</a></li>
+                                <li><a href="#">Chính Sách</a></li>
+                                <li><a href="#">Liên lạc</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p>© 2021 <a href="#">WebSUDO</a> All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
