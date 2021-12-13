@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Models.Entity;
 
 namespace WebSUDO
 {
@@ -24,6 +25,8 @@ namespace WebSUDO
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddMvc();
+            //services.AddDbContext<SudoDbContext>(options => options.UseSqlServer("name=ConnectionStrings:SudoDbContext"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

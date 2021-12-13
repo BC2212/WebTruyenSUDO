@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using WebSUDO.Models;
+using Models.DAO;
 
 namespace WebSUDO.Controllers
 {
@@ -20,7 +21,9 @@ namespace WebSUDO.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var listTruyen = new TruyenDb().GetTruyenMoiCapNhat(0);
+            return View(listTruyen);
+            //return View();
         }
 
         public IActionResult Privacy()
