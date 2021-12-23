@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebSUDO_v2")]
+[assembly: AssemblyTitle("WebSUDO_V2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebSUDO_v2")]
+[assembly: AssemblyProduct("WebSUDO_V2")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ffce6af7-9fdf-4dcb-86af-df487d50011a")]
+[assembly: Guid("be327151-e258-46df-a5bd-7f0d698f93be")]
 
 // Version information for an assembly consists of the following four values:
 //

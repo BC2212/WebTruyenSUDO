@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\TruyenDb.cs" />
     <Compile Include="Entity\About.cs" />
     <Compile Include="Entity\ChapterTruyen.cs" />
     <Compile Include="Entity\Comment.cs" />
@@ -73,9 +74,7 @@
     <Compile Include="Entity\UserGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
