@@ -47,7 +47,7 @@
                                             <a asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
                                         </li>
                                         <li>
-                                            <a asp-area="" asp-controller="Home" asp-action="ThongTinTruyen">Thể Loại</a>
+                                            @Html.ActionLink("Thể loại", "Index", "TheLoai", null, null)
                                         </li>
                                         <li>
                                             <a href="#">Hoàn Thành</a>
@@ -115,10 +115,11 @@
             <nav class="off-menu">
                 <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
                     <li>
-                        <a href="#" class="menu-link  main-menu-link"> Thể Loại </a>
+                        @Html.ActionLink("Thể loại", "Index", "TheLoai", new { area=""}, new { @class = "menu-link  main-menu-link" })
                     </li>
                     <li>
                         <a href="#" class="menu-link  main-menu-link"> Hoàn Thành </a>
+                        @Html.ActionLink("Hoàn thành", "Index", "Home", new { area=""}, new { @class = "menu-link  main-menu-link" })
                     </li>
                     <li>
                         <a href="#" class="menu-link  main-menu-link"> Lịch Sử </a>
