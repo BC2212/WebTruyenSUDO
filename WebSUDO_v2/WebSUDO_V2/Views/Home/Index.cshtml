@@ -1,8 +1,146 @@
-﻿@model Models.Entity.Truyen
+﻿@model IEnumerable<Models.Entity.Truyen>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "SUDO";
 }
 
-<h2>Index</h2>
 
+@*<div class="slide-home">
+    <div class="container">
+        <div class="row">
+            <div class="c-blog__heading style-2 font-heading ">
+                <h2 class="h4">
+                    <i class=""><img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-right-arrow-arrows-vitaliy-gorbachev-blue-vitaly-gorbachev.png" /></i> Truyện hot trong ngày
+                </h2>
+            </div>
+            <div id="slide-top" class="owl-carousel owl-loaded owl-drag">
+                @foreach (Truyen item in Model.ListTruyenHot)
+                {
+                    <div class="item">
+                        <div class="img-item">
+                            <span class="manga-title-badges hot">HOT</span>
+                            <a href="#">
+                                <img width="125" height="180" src="~/@item.StorageLink/@item.Image" alt="@item.Name">
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <div class="line-2 font-weight-bold">
+                                @Html.ActionLink(item.Name, "Index", "Home", null, null)
+                            </div>
+                            <div class="post-on font-meta">
+                                <span></span>
+                            </div>
+                            <div class="chapter-item">
+                                <span class="chapter">
+                                    @Html.ActionLink(item.LatestChapterName, "Index", "Home", null, null)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<div class="site-content">
+    <div class="container" style="margin-top: 50px">
+        <div class="row ">
+            <div class="main-col col-md-8 col-sm-8">
+                <div class="c-blog__heading style-2 font-heading ">
+                    <h2 class="h4">
+                        <i class=""><img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-right-arrow-arrows-vitaliy-gorbachev-blue-vitaly-gorbachev.png" /></i> Truyện Mới Cập Nhật
+                    </h2>
+                </div>
+                <div class="manga-content">
+                    <div class="row px-2 list-item">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-6 col-md-3 badge-pos-1 px-2">
+                                <div class="page-item-detail">
+                                    <div class="item-thumb hover-details c-image-hover">
+                                        <a href="#" title="@item.Name">
+                                            <img width="175" height="238" class="img-responsive" src="~/@item.StorageLink/@item.Image" title="@item.Name" alt="@item.Name">
+                                        </a>
+                                    </div>
+                                    <div class="item-summary">
+                                        <div class="post-title font-title">
+                                            <h3 class="line-2 pt-2">
+                                                @Html.ActionLink(item.Name, "Index", "Truyen", new { id = item.ID}, null)
+                                            </h3>
+                                        </div>
+                                        <p></p>
+                                        <div class="list-chapter">
+                                            <div class="chapter-item ">
+                                                <span class="chapter font-meta">
+                                                    @Html.ActionLink(item.LatestChapterName, "Index", "Truyen", new { id = item.ID}, new { @clas = "btn-link" })
+                                                </span>
+                                                <span class="post-on font-meta"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <ul class="pager">
+                            <li class="disabled"><span>«</span></li>
+                            <li class="active"><span>1</span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><span>...</span></li>
+                            <li class="hidden-xs"><a href="#">129</a></li>
+                            <li><a href="h#" rel="next">»</a></li>
+                        </ul>
+                        <style type="text/css">
+                            .pager {
+                                margin: 0;
+                                padding: 0;
+                                clear: both;
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            ul.pager li {
+                                display: inline-block;
+                                list-style: none;
+                                margin: 0 2px;
+                            }
+
+                                ul.pager li:hover a {
+                                    background-color: #f47268;
+                                }
+
+                                ul.pager li:hover a {
+                                    color: white;
+                                }
+
+                                ul.pager li.active span {
+                                    display: block;
+                                    padding: 8px 15px;
+                                    background-color: #f47268;
+                                    color: white;
+                                }
+
+                                ul.pager li a {
+                                    color: #898989;
+                                    text-decoration: none;
+                                    font-weight: 500;
+                                    display: block;
+                                    padding: 8px 15px;
+                                    cursor: pointer;
+                                    background: #ebebeb;
+                                }
+                        </style>
+                    </div>
+                </div>
+            </div>
+            @Html.Partial("~/Views/Shared/TruyenHot.cshtml");
+        </div>
+    </div>
+</div>
+
+<div class="go-to-top">
+    <i class="fa fa-arrow-up"></i>
+</div>
+<input type="hidden" name="_token" id="token" value="iFPOl6ecn8kDzcm8WTufa79g9bJzUwKwBhjfdV2m">
+<script type="text/javascript" src="~/Scripts/all.js"></script>

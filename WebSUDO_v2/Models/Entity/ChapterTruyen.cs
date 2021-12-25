@@ -17,7 +17,7 @@ namespace Models.Entity
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ChapterID { get; set; }
+        public long ChapterID { get; set; }
 
         [StringLength(250)]
         public string TenChapter { get; set; }

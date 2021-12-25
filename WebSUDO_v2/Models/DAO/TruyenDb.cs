@@ -19,14 +19,17 @@ namespace Models.DAO
 
         public IEnumerable<Truyen> GetTruyenMoiCapNhat(int page = 1)
         {
-            var list = context.Database.SqlQuery<Truyen>("SP_SUDO_LayDSTruyenMoiCapNhat @Page", new SqlParameter("@Page", page)).ToList();
-            return list;
+            return context.Database.SqlQuery<Truyen>("SP_SUDO_LayDSTruyenMoiCapNhat @Page", new SqlParameter("@Page", page)).ToList();
         }
 
-        public IEnumerable<TheLoai> GetTheLoai()
+        public IEnumerable<Truyen> GetTruyenHot()
         {
-            var list = context.Database.SqlQuery<TheLoai>("SP_SUDO_LayDSTheLoai", null).ToList();
-            return list;
+            return context.Database.SqlQuery<Truyen>("SP_SUDO_LayDSTruyenHot").ToList();
+        }
+
+        public Truyen GetTruyenTheoID(int id)
+        {
+            return context.Database.SqlQuery<Truyen>("SP_SUDO_LayTruyenTheoID @ID", new SqlParameter("@ID", id)).SingleOrDefault();
         }
     }
 }

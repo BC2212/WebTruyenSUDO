@@ -1,0 +1,36 @@
+﻿<div class="sidebar col-md-4 col-sm-4 ">
+    <br>
+    <div class="popular">
+        <div class="widget-heading">
+            <h5 class="heading">Truyện Hot</h5>
+        </div>
+        <div class="widget-content">
+            @foreach (var item in (IEnumerable<Models.Entity.Truyen>)TempData["ListTruyenHot"])
+            {
+                <div class="popular-item-wrap">
+                    <div class="popular-img widget-thumbnail c-image-hover">
+                        <a title="@item.Name" href="#">
+                            <img width="75" height="106" class="img-responsive lazyload" src="~/@item.StorageLink/@item.Image" loading="lazy" title="@item.Name" alt="@item.Name">
+                        </a>
+                    </div>
+                    <div class="popular-content">
+                        <h5 class="widget-title">
+                            <a title="@item.Name" href="#">@item.Name</a>
+                        </h5>
+                        <div class="list-chapter">
+                            <div class="chapter-item ">
+                                <span class="chapter font-meta">
+                                    @Html.ActionLink(item.LatestChapterName, "Index", "Home", null, new { @class = "btn-link" })
+                                </span>
+                                <span class="post-on font-meta">
+                                </span>
+                            </div>
+                            <div class="chapter-item ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace WebSUDO_V2
+namespace WebSUDO_v2
 {
     public class MvcApplication : System.Web.HttpApplication
     {
