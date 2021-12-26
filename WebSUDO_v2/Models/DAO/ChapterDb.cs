@@ -19,7 +19,15 @@ namespace Models.DAO
 
         public ChapterTruyen GetChapter(int truyenID, int chapterID)
         {
-            return context.Database.SqlQuery<ChapterTruyen>("SP_SUDO_LayChapterTheoTruyenID @TruyenID @ChapterID", new SqlParameter[] {
+            return context.Database.SqlQuery<ChapterTruyen>("SP_SUDO_LayChapterTruyen @TruyenID, @ChapterID", new SqlParameter[] {
+                new SqlParameter("@TruyenID", truyenID),
+                new SqlParameter("@ChapterID", chapterID)
+            }).SingleOrDefault();
+        }
+
+        public string GetChapterStorageLink(int truyenID, int chapterID)
+        {
+            return context.Database.SqlQuery<string>("SP_SUDO_LayURLChapter @TruyenID, @ChapterID", new SqlParameter[] {
                 new SqlParameter("@TruyenID", truyenID),
                 new SqlParameter("@ChapterID", chapterID)
             }).SingleOrDefault();

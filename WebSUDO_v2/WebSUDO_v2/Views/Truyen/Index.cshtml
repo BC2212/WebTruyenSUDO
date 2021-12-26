@@ -117,7 +117,7 @@
                             @foreach (ChapterTruyen chapter in Model.Chapters)
                             {
                                 <li class="wp-manga-chapter">
-                                    <a href="@Url.Action("Index", "Home")">@chapter.TenChapter</a>
+                                    <a href="@Url.Action("Read", "Truyen", new {truyenID = chapter.TruyenID, chapterID = chapter.ChapterID, tenTruyen = Model.Truyen.Name})">@chapter.TenChapter</a>
                                     <span class="chapter-release-date">
                                         <i>@chapter.CreatedDate </i>
                                     </span>

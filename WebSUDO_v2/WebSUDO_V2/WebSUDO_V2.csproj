@@ -143,6 +143,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Assets\fonts\ionicons.woff2" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\chapter.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
@@ -172,6 +173,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\Truyen\Read.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
