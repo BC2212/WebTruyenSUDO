@@ -8,6 +8,10 @@
     IEnumerable<ChapterTruyen> listChapters = (IEnumerable<ChapterTruyen>)Model.ListChapters;
 }
 
+@section styles{
+    <link type="text/css" rel="stylesheet" href="~/Content/chapter.css" />
+}
+
 <div class="site-content content-chapter">
     <div class="container">
         <div class="row">
@@ -20,9 +24,8 @@
                                 <div class="entry-header_wrap">
                                     <div class="c-breadcrumb-wrapper">
                                         <ol class="breadcrumb">
-                                            <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
-                                            <li>@Html.ActionLink((string)ViewBag.TenTruyen, "Index", "Truyen", new { truyenId = chapter.TruyenID }, null)</li>
-                                            </li>
+                                            <li>@Html.ActionLink("Trang chủ", "Index", "Home", null, null)</li>
+                                            <li>@Html.ActionLink((string)ViewBag.TenTruyen, "Index", "Truyen", new { id = chapter.TruyenID }, null)</li>
                                             <li class="active">@chapter.TenChapter</li>
                                         </ol>
                                         <div class="action-icon">
@@ -38,22 +41,7 @@
                             </div>
                         </div>
                         <div class="short-link entry-header">
-                            <div class="wp-manga-nav">
-                                <div class="select-view">
-                                    <div class="chapters_selectbox_holder" data-type="manga", data-style="paged">
-                                        <div class="c-selectpicker selectpicker_chapter">
-                                            <label>
-                                                <select class="selectpicker single-chapter-select">
-                                                    @foreach (ChapterTruyen item in listChapters)
-                                                    {
-                                                        <option class="short" data-limit="40"></option>
-                                                    }
-                                                </select>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="wp-manga-nav"></div>
                         </div>
                         <div class="entry-content">
                             <div class="entry-content_wrap">
@@ -61,9 +49,9 @@
                                     @foreach (string item in chapterImages)
                                     {
                                         int i = 0;
-                                    <div class="page-break ">
-                                        <img id="image-@i" src="../@item" class="chapter-img img-responsive" loading="lazy" width="800px" height="400px" alt="@String.Concat((string)ViewBag.TenTruyen, " - ", chapter.TenChapter)">
-                                    </div>;
+                                        <div class="page-break ">
+                                            <img id="image-@i" src="../@item" class="chapter-img img-responsive" loading="lazy" width="800" height="400" alt="@String.Concat((string)ViewBag.TenTruyen, " - ", chapter.TenChapter)">
+                                        </div>;
                                         i++;
                                     }
                                 </div>
@@ -75,28 +63,15 @@
                     <div class="wp-manga-nav">
                         <div class="entry-header_wrap">
                             <div class="select-view">
-
-                                <div class="chapters_selectbox_holder" data-manga="290" data-chapter="chapter-3" data-vol="104" data-type="manga" data-style="paged">
-
+                                <div class="chapters_selectbox_holder" data-type="manga" data-style="paged">
                                     <div class="c-selectpicker selectpicker_chapter" for="volume-id-104">
                                         <label>
                                             <select class="selectpicker single-chapter-select">
-                                                <option class="short " data-limit="40" value="chapter-4" data-redirect="https://saytruyen.net/truyen-su-tro-lai-cua-anh-hung-cap-tham-hoa/chuong-4" data-navigation="postID=5397&amp;chapter=chapter-4&amp;manga-paged=1&amp;style=paged&amp;action=chapter_navigate_page">
-                                                    Chapter 4
-                                                </option>
-                                                <option class="short " data-limit="40" value="chapter-3" data-redirect="https://saytruyen.net/truyen-su-tro-lai-cua-anh-hung-cap-tham-hoa/chuong-3" data-navigation="postID=5397&amp;chapter=chapter-3&amp;manga-paged=1&amp;style=paged&amp;action=chapter_navigate_page">
-                                                    Chapter 3
-                                                </option>
-                                                <option class="short " data-limit="40" value="chapter-2" data-redirect="https://saytruyen.net/truyen-su-tro-lai-cua-anh-hung-cap-tham-hoa/chuong-2" data-navigation="postID=5397&amp;chapter=chapter-2&amp;manga-paged=1&amp;style=paged&amp;action=chapter_navigate_page">
-                                                    Chapter 2
-                                                </option>
-                                                <option class="short " data-limit="40" value="chapter-1" data-redirect="https://saytruyen.net/truyen-su-tro-lai-cua-anh-hung-cap-tham-hoa/chuong-1" data-navigation="postID=5397&amp;chapter=chapter-1&amp;manga-paged=1&amp;style=paged&amp;action=chapter_navigate_page">
-                                                    Chapter 1
-                                                </option>
-                                                {&quot;id&quot;:276384,&quot;chapter&quot;:1,&quot;name&quot;:&quot;Chapter 1&quot;,&quot;updated_at&quot;:&quot;2021-12-23T20:53:43.000000Z&quot;,&quot;view&quot;:2309}
-                                                <option class="short " data-limit="40" value="chapter-0" data-redirect="https://saytruyen.net/truyen-su-tro-lai-cua-anh-hung-cap-tham-hoa/chuong-0" selected data-navigation="postID=5397&amp;chapter=chapter-0&amp;manga-paged=1&amp;style=paged&amp;action=chapter_navigate_page">
-                                                    Chapter 0
-                                                </option>
+
+                                                @foreach (ChapterTruyen item in listChapters)
+                                                {
+                                                    <option class="short" data-limit="40" data-redirect="@Url.Action("Read", "Truyen", new { truyenID=item.TruyenID, chapterID=item.ChapterID, tenTruyen=ViewBag.TenTruyen})">@item.TenChapter</option>
+                                                }
                                             </select>
                                         </label>
                                     </div>
@@ -106,414 +81,33 @@
                                 <div class="nav-links">
                                     <i class="mobile-nav-btn icon ion-md-menu"></i>
                                     <div class="nav-next ">
-                                        <a href="https://saytruyen.net/truyen-su-tro-lai-cua-anh-hung-cap-tham-hoa/chuong-1" class="btn next_page" title="Chapter 1">Tiếp</a>
+                                        @if (chapter.ChapterID == listChapters.Last().ChapterID)
+                                        {
+                                            @Html.ActionLink("Trước", "Read", "Truyen", new { truyenID = chapter.TruyenID, chapterID = chapter.ChapterID - 1, tenTruyen = (string)ViewBag.TenTruyen }, new { @class = "btn prev_page" })
+                                        }
+                                        else if (chapter.ChapterID == listChapters.First().ChapterID)
+                                        {
+                                            @Html.ActionLink("Tiếp", "Read", "Truyen", new { truyenID = chapter.TruyenID, chapterID = chapter.ChapterID + 1, tenTruyen = (string)ViewBag.TenTruyen }, new { @class = "btn next_page" })
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("Trước", "Read", "Truyen", new { truyenID = chapter.TruyenID, chapterID = chapter.ChapterID - 1, tenTruyen = (string)ViewBag.TenTruyen }, new { @class="btn prev_page"})
+                                            @Html.ActionLink("Tiếp", "Read", "Truyen", new { truyenID = chapter.TruyenID, chapterID = chapter.ChapterID + 1, tenTruyen = (string)ViewBag.TenTruyen }, new { @class="btn next_page"})
+                                        }
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="ad c-ads custom-code facebook-group">
-                    <p>Truy cập ngay và tham gia nhóm dưới đây để có thể trao đổi về các chap mới nhất của bộ truyện tranh Sự Trở Lại Của Anh Hùng Cấp Thảm Họa</p>
-                    <div class="fb-group" data-href="https://www.facebook.com/groups/2790995494513741" data-width="280" data-show-metadata="false" data-lazy="true">
-                    </div>
-                    <p>Và cùng để lại bình luận cho bộ truyện này nhé!</p>
-                </div>
-                <div id="binhluan">
-                    <div id="binhluan_section">
-                        <div class="c-blog__heading style-2 font-heading">
-                            <h2 class="h4"><i class="icon ion-md-star"></i>Comment (<span class="colorblue" id="kountcmt"></span>)</h2>
-                        </div>
-                        <input hidden value="https://saytruyen.net/formReplyComment" class="url-form-comment">
-                        <div class="wrap-form-binhluan">
-                            <div class="emo-box">
-                                <div class="dropdown emo-tab">
-                                    <button id="ch" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="emo-item">
-                                        <img class="lazyload" data-src="/img/ch01.gif" alt="ch01-1">
-                                    </button>
-                                    <div class="dropdown-menu emo-menu">
-                                        <div class="emo-expand">
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch01.gif" alt="ch01-1">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch02.gif" alt="ch01-2">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch03.gif" alt="ch01-3">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch04.fb4fce36.gif" alt="ch01-4">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch05.04520504.gif" alt="ch01-5">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch06.e577a303.gif" alt="ch01-6">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch07.cb135bae.gif" alt="ch01-7">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch08.gif" alt="ch01-8">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch09.f7ef4649.gif" alt="ch01-9">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch10.8b2cbd6d.gif" alt="ch01-10">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch11.da380f09.gif" alt="ch01-11">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch12.3e94f577.gif" alt="ch01-12">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch13.0312a4fd.gif" alt="ch01-13">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch14.gif" alt="ch01-14">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch15.d7a65853.gif" alt="ch01-15">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch16.b105b867.gif" alt="ch01-16">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch17.gif" alt="ch01-17">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch18.a39c57e7.gif" alt="ch01-18">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch19.6d1fb4f6.gif" alt="ch01-19">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch20.43a3489d.gif" alt="ch01-20">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch21.3f727291.gif" alt="ch01-21">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch22.c86d989d.gif" alt="ch01-22">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch23.2054d70f.gif" alt="ch01-23">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/ch24.860c1f83.gif" alt="ch01-24">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown emo-tab">
-                                    <button id="capoo" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="emo-item">
-                                        <img class="lazyload" data-src="/img/capoo01.c2fa4e1f.gif" alt="capoo01-1">
-                                    </button>
-                                    <div aria-labelledby="capoo" class="dropdown-menu emo-menu" style="">
-                                        <div class="emo-expand">
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo01.c2fa4e1f.gif" alt="capoo01-1">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo02.fae45118.gif" alt="capoo01-2">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo03.87550b37.gif" alt="capoo01-3">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo04.4aba6dee.gif" alt="capoo01-4">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo05.95a6a393.gif" alt="capoo01-5">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo06.c0e3b2fd.gif" alt="capoo01-6">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo07.cf97f7f7.gif" alt="capoo01-7">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo08.36af97ce.gif" alt="capoo01-8">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo09.8997fd3c.gif" alt="capoo01-9">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo10.9b4a43be.gif" alt="capoo01-10">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo11.a91eccbc.gif" alt="capoo01-11">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/capoo12.ecdedb8b.gif" alt="capoo01-12">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown emo-tab">
-                                    <button id="qoobeeem" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="emo-item">
-                                        <img class="lazyload" data-src="/img/qoobeeem001.87c20dfb.gif" alt="capoo01-1">
-                                    </button>
-                                    <div aria-labelledby="qoobeeem" class="dropdown-menu emo-menu" style="">
-                                        <div class="emo-expand">
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem001.87c20dfb.gif" alt="capoo01-1">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem002.9254a441.gif" alt="capoo01-2">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem003.5814f5e5.gif" alt="capoo01-3">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem004.ebc173ee.gif" alt="capoo01-4">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem005.b1236513.gif" alt="capoo01-5">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem006.a8b83c3f.gif" alt="capoo01-6">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem007.60d394d5.gif" alt="capoo01-7">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem008.56b10a09.gif" alt="capoo01-8">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem009.dd7b7d7c.gif" alt="capoo01-9">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem010.f7ab7341.gif" alt="capoo01-10">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem011.77e2bd31.gif" alt="capoo01-11">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem012.19744f20.gif" alt="capoo01-12">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem013.d150c575.gif" alt="capoo01-13">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem014.5063601d.gif" alt="capoo01-14">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem015.affba474.gif" alt="capoo01-15">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem016.5a9a4557.gif" alt="capoo01-16">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem017.7889313c.gif" alt="capoo01-17">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem018.3d272759.gif" alt="capoo01-18">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem019.9fd789b8.gif" alt="capoo01-19">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem020.23017474.gif" alt="capoo01-20">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem021.227e2152.gif" alt="capoo01-21">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem022.3c47c091.gif" alt="capoo01-22">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem023.0cbd6a26.gif" alt="capoo01-23">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem024.3c876d7a.gif" alt="capoo01-24">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem025.c13e8493.gif" alt="capoo01-25">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem026.ec2086a6.gif" alt="capoo01-26">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem027.ec4a492d.gif" alt="capoo01-27">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem028.5c536475.gif" alt="capoo01-28">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem029.016bdc38.gif" alt="capoo01-29">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/qoobeeem30.gif" alt="capoo01-30">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown emo-tab">
-                                    <button id="qoobeeem" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="emo-item">
-                                        <img class="lazyload" data-src="/img/1.jpg" alt="qoobeeem-1">
-                                    </button>
-                                    <div aria-labelledby="qoobeeem" class="dropdown-menu emo-menu" style="">
-                                        <div class="emo-expand">
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/2.jpg" alt="qoobeeem-1">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/3.png" alt="qoobeeem-2">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/4.png" alt="qoobeeem-3">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/5.jpg" alt="qoobeeem-4">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/6.gif" alt="qoobeeem-5">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/7.gif" alt="qoobeeem-6">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/8.gif" alt="qoobeeem-7">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/9.gif" alt="qoobeeem-8">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/10.gif" alt="qoobeeem-9">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/11.gif" alt="qoobeeem-10">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/12.gif" alt="qoobeeem-11">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/13.png" alt="qoobeeem-12">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/14.png" alt="qoobeeem-13">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/15.gif" alt="qoobeeem-14">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/16.gif" alt="qoobeeem-15">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/17.gif" alt="qoobeeem-16">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/18.gif" alt="qoobeeem-17">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/19.png" alt="qoobeeem-18">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/20.jpg" alt="qoobeeem1-19">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/1.jpg" alt="qoobeeem-20">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown emo-tab">
-                                    <button id="qoobeeem" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="emo-item">
-                                        <img class="lazyload" data-src="/img/pepe2/1.gif" alt="pepe2-1">
-                                    </button>
-                                    <div aria-labelledby="qoobeeem" class="dropdown-menu emo-menu" style="">
-                                        <div class="emo-expand">
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/2.gif" alt="pepe2-2">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/3.png" alt="pepe2-3">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/4.gif" alt="pepe2-4">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/5.gif" alt="pepe2-5">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/6.gif" alt="pepe2-6">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/7.gif" alt="pepe2-7">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/8.gif" alt="pepe2-8">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/9.gif" alt="pepe2-9">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/10.gif" alt="pepe2-10">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/11.gif" alt="pepe2-11">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/12.gif" alt="pepe2-12">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/13.gif" alt="pepe2-13">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/14.gif" alt="pepe2-14">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/15.gif" alt="pepe2-15">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/16.gif" alt="pepe2-16">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/17.gif" alt="pepe2-17">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/18.png" alt="pepe2-18">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/19.png" alt="pepe2-19">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/20.png" alt="pepe2-20">
-                                            </button>
-                                            <button class="emo-item">
-                                                <img class="lazyload" data-src="/img/pepe2/1.gif" alt="pepe2-21">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="cmtlid" name="cmtlid" contenteditable="true" class="tiny comment_content" cols="40" rows="4" maxlength="500" placeholder="Nội dung thần thức..."></div>
-                            <textarea style="display: none;" id="hrcmt" name="hrcmt" class="comment_content"></textarea>
-                            <div class="binhluan-button">
-                                <div class="hint">
-                                    Spam is strictly prohibited, spam account will be deleted
-                                </div>
-                                <button id="sendcmt" type="button" class="btn-button" data-story-id="5397" data-chapter-id="276383" data-url="https://saytruyen.net/addComment">Comment <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                                <br class="clear">
-                            </div>
-                        </div>
-                        <div class="wrap-list-binhluan">
-                            <div id="comments_load" class="list_comment">
-                                <ul class="list_comment">
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @Html.Partial(Cls_Main.COMMENT, (IEnumerable<Comment>)Model.ListComments)
             </div>
         </div>
     </div>
 </div>
 
 @section scripts{
+    <script type="text/javascript" src="~/Scripts/custom.js"></script>
     <script type="text/javascript" src="~/Scripts/chapter.js"></script>
 }

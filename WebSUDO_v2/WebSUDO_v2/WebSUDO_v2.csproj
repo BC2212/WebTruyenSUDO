@@ -109,6 +109,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\chapter.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
@@ -143,6 +144,8 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Assets\fonts\ionicons.woff2" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\chapter.js" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
@@ -159,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cls_Main.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TheLoaiController.cs" />
     <Compile Include="Controllers\TruyenController.cs" />
@@ -172,6 +176,8 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\Truyen\Read.cshtml" />
+    <Content Include="Views\Shared\Comment.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

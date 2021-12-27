@@ -1,17 +1,22 @@
 ﻿@using Models.Entity
 @model dynamic
+
+@{ 
+    Truyen truyen = (Truyen)Model.Truyen;
+}
+
 <div class="site-content">
     <div class="profile-manga">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12">
                     <div class="post-title">
-                        <h1>@Model.Truyen.Name</h1>
+                        <h1>@truyen.Name</h1>
                     </div>
                     <div class="tab-summary">
                         <div class="summary_image">
                             <a href="#">
-                                <img width="193" height="278" class="img-responsive" src="~/@Model.Truyen.StorageLink/@Model.Truyen.Image" alt="@Model.Truyen.Name">
+                                <img width="193" height="278" class="img-responsive" src="~/@truyen.StorageLink/@truyen.Image" alt="@truyen.Name">
                             </a>
                         </div>
                         <div class="summary_content_wrap">
@@ -78,15 +83,14 @@
                                         </div>
                                         <div class="summary-content">
                                             <div class="genres-content">
-                                                <a href="" rel="tag">Manhua</a>
-                                                <a href="" rel="tag">Shoujo</a>
+                                                <a href="" rel="tag">Manhwa</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="init-links" class="nav-links">
-                                    <a href="" id="btn-read-last" class="c-btn c-btn_style-1">Chap đầu</a>
-                                    <a href="" id="btn-read-first" class="c-btn c-btn_style-1">Chap cuối</a>
+                                    @Html.ActionLink("Chap đầu", "Read", "Truyen", new { truyenID = truyen.ID, chapterID = 2, tenTruyen = truyen.Name }, new { @class = "c-btn c-btn_style-1" })
+                                    @Html.ActionLink("Chap cuối", "Read", "Truyen", new { truyenID = truyen.ID, chapterID = truyen.LatestChapterID, tenTruyen = truyen.Name }, new { @class = "c-btn c-btn_style-1" })
                                 </div>
                             </div>
                         </div>
@@ -480,7 +484,7 @@
                         </div>
                     </div>
                 </div>
-                @Html.Partial("~/Views/Shared/TruyenHot.cshtml")
+                @Html.Partial(Cls_Main.TOPHOT)
             </div>
         </div>
     </div>

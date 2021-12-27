@@ -66,9 +66,9 @@ namespace Models.Entity
 
         public int? CommentCount { get; set; }
 
-        public string LatestChapterName { get; set; }
+        public virtual string LatestChapterName { get; set; }
         
-        public long LatestChapterID { get; set; }
+        public virtual long LatestChapterID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChapterTruyen> ChapterTruyens { get; set; }

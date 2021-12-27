@@ -13,6 +13,8 @@ namespace Models.Entity
 
         public long TruyenID { get; set; }
 
+        public long ChapterID { get; set; }
+
         [Required]
         [StringLength(250)]
         public string Content { get; set; }
@@ -22,6 +24,9 @@ namespace Models.Entity
         public long CreatedBy { get; set; }
 
         public bool Status { get; set; }
+
+        public virtual string UserName { get; set; }
+        public virtual string TenChapter { get; set; }
 
         public virtual Truyen Truyen { get; set; }
 

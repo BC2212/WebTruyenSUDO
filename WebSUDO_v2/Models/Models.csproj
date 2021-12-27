@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="DAO\BasicDb.cs" />
     <Compile Include="DAO\ChapterDb.cs" />
+    <Compile Include="DAO\CommentDb.cs" />
     <Compile Include="DAO\TheLoaiDb.cs" />
     <Compile Include="DAO\TruyenDb.cs" />
     <Compile Include="Entity\About.cs" />

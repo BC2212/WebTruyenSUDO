@@ -37,6 +37,7 @@ namespace WebSUDO_v2.Controllers
             model.ListChapters = new ChapterDb().GetDSChapterTheoTruyenID(truyenID);
             string url = (string)model.CurrentChapter.ImageLink;
             model.ChapterImages = Directory.EnumerateFiles(Server.MapPath("~/"+url)).Select(fn => url + "/" + Path.GetFileName(fn));
+            model.ListComments = new CommentDb().GetDSCommentTheoChapterTruyen(truyenID, chapterID);
             ViewBag.TenTruyen = tenTruyen;
             return View(model);
         }

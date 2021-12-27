@@ -73,7 +73,7 @@
                                         <div class="list-chapter">
                                             <div class="chapter-item ">
                                                 <span class="chapter font-meta">
-                                                    @Html.ActionLink(item.LatestChapterName, "Index", "Truyen", new { id = item.ID}, new { @clas = "btn-link" })
+                                                    @Html.ActionLink(item.LatestChapterName, "Read", "Truyen", new { truyenID=item.ID, chapterID=item.LatestChapterID, tenTruyen=item.Name}, new { @clas = "btn-link" })
                                                 </span>
                                                 <span class="post-on font-meta"></span>
                                             </div>
