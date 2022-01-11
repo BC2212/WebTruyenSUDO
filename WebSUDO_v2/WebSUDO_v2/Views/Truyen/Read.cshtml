@@ -6,6 +6,7 @@
     ChapterTruyen chapter = Model.CurrentChapter;
     IEnumerable<string> chapterImages = (IEnumerable<string>)Model.ChapterImages;
     IEnumerable<ChapterTruyen> listChapters = (IEnumerable<ChapterTruyen>)Model.ListChapters;
+    IEnumerable<Comment> listComments = (IEnumerable<Comment>)Model.ListComments;
 }
 
 @section styles{
@@ -101,7 +102,38 @@
                         </div>
                     </div>
                 </div>
-                @Html.Partial(Cls_Main.COMMENT, (IEnumerable<Comment>)Model.ListComments)
+                <div id="binhluan">
+                    <div id="binhluan_section">
+                        <div class="c-blog__heading style-2 font-heading">
+                            <h2 class="h4"><i class="icon ion-md-star"></i>Comment (<span class="colorblue" id="kountcmt"></span>)</h2>
+                        </div>
+                        <input hidden value="" class="url-form-comment">
+                        <div class="wrap-form-binhluan">
+                            <div id="cmtlid" name="cmtlid" contenteditable="true" class="tiny comment_content" cols="40" rows="4" maxlength="500" placeholder="Nội dung thần thức..."></div>
+                            <textarea style="display: none;" id="hrcmt" name="hrcmt" class="comment_content"></textarea>
+                            <div class="binhluan-button">
+                                <div class="hint">
+                                    Spam is strictly prohibited, spam account will be deleted
+                                </div>
+                                <button id="addCmt" type="button" class="btn-button" truyen-id="@chapter.TruyenID" chapter-id="@chapter.ChapterID" url="@Url.Action("AddComment")">Comment <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                <br class="clear">
+                            </div>
+                        </div>
+
+                        @if (listComments.Count() > 0)
+                        {
+                            <div class="wrap-list-binhluan">
+                                <div id="comments_load" class="list_comment">
+                                    <ul class="list_comment"  id="listComments">
+                                        @Html.Partial(Cls_Main.COMMENT, listComments);
+                                    </ul>
+                                </div>
+
+                                <button class="btn btn-block btn-loadmore-comment" data-offset="10">Xem thêm</button>
+                            </div>
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     </div>

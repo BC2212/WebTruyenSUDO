@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDb.cs" />
     <Compile Include="DAO\BasicDb.cs" />
     <Compile Include="DAO\ChapterDb.cs" />
     <Compile Include="DAO\CommentDb.cs" />

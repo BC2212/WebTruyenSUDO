@@ -59,11 +59,17 @@
                                         <li>
                                             <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
                                         </li>
-                                        <li class="up-manga">
+                                        @*<li class="up-manga">
                                             <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
-                                        </li>
+                                        </li>*@
                                     </ul>
                                 </div>
+
+                                <label class="switch">
+                                    <input type="checkbox"/>
+                                    <span class="slider round"></span>
+                                </label>
+
                                 <div class="search-navigation search-sidebar">
                                     <ul class="main-menu-search nav-menu">
                                         <li class="menu-search">
@@ -110,7 +116,7 @@
                     <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng Nhập</a>
                 </span>
                 <span class="c-modal_sign-up">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng Kí</a>
+                    <a href="#" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng Kí</a>
                 </span>
             </div>
             <nav class="off-menu">
@@ -195,10 +201,11 @@
                                 <input hidden id="login_url" value="">
                                 <input hidden id="register_url" value="">
                                 <input hidden id="reset_url" value="">
-                                <p class="submit">
+                                @*<p class="submit">
                                     <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In">
                                     <input type="hidden" name="testcookie" value="1">
-                                </p>
+                                </p>*@
+                                @Html.ActionLink("Login", "Index", "Login", new { area="Admin", username="admin", password="123"}, new { @class="button button-primary button-large wp-submit"})
                             </form>
                             <p class="nav">
                                 <a href="javascript:void(0)" class="to-reset">Quên Mật Khẩu?</a>

@@ -15,7 +15,7 @@
                     </div>
                     <div class="popular-content">
                         <h5 class="widget-title">
-                            <a title="@item.Name" href="#">@item.Name</a>
+                            <a title="@item.Name" href="@Url.Action("Read", "Truyen", new {truyenID = item.ID, chapterID = item.LatestChapterID, tenTruyen = item.Name})">@item.Name</a>
                         </h5>
                         <div class="list-chapter">
                             <div class="chapter-item ">

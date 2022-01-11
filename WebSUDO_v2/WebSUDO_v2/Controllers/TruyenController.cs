@@ -41,5 +41,21 @@ namespace WebSUDO_v2.Controllers
             ViewBag.TenTruyen = tenTruyen;
             return View(model);
         }
+
+        public PartialViewResult LoadComment(long truyenID=0, long chapterID= 0)
+        {
+            var list = new CommentDb().GetDSCommentTheoChapterTruyen(truyenID, chapterID);
+            return PartialView(list);
+        }
+
+        [HttpPost]
+        public JsonResult AddComment(dynamic data)
+        {
+            var _result = new CommentDb().AddComment(data.truyenID, data.chapterID, data.userID, data.content);
+            return Json(new
+            {
+                result = _result
+            });
+        }
     }
 }
