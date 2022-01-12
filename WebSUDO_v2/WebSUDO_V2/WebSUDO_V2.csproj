@@ -154,6 +154,8 @@
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\manga.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
@@ -167,20 +169,22 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Common\CustomMembershipProvider.cs" />
-    <Compile Include="Areas\Admin\Common\SessionHelper.cs" />
-    <Compile Include="Areas\Admin\Common\UserSession.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Model\AccountModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
-    <Compile Include="Cls_Main.cs" />
+    <Compile Include="Common\Cls_Main.cs" />
+    <Compile Include="Common\CustomMembershipProvider.cs" />
+    <Compile Include="Common\SessionHelper.cs" />
+    <Compile Include="Common\UserSession.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\TheLoaiController.cs" />
     <Compile Include="Controllers\TruyenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +194,7 @@
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="Views\Truyen\Read.cshtml" />
     <Content Include="Views\Shared\Comment.cshtml" />
+    <Content Include="Views\Shared\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,8 +209,8 @@
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Data\" />
     <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Models\" />
     <Folder Include="Storage\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

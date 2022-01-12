@@ -13,6 +13,14 @@ namespace WebSUDO_v2
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Application["NoOfVisitors"] = 0;
+        }
+
+        protected void Session_Start()
+        {
+            Application.Lock();
+            Application["NoOfVisitors"] = (int)Application["NoOfVisitors"] + 1;
+            Application.UnLock();
         }
     }
 }

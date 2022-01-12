@@ -1,0 +1,38 @@
+﻿@model WebSUDO_v2.Models.Account
+@using (Html.BeginForm("Index", "Login", new { Area = "" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+
+    @*<form name="loginform" id="loginform" method="post">*@
+    <p>
+        <label>
+            Email * <br>
+            @*<input type="text" name="log" class="input user_login" value="" size="20">*@
+            @Html.TextBoxFor(model => model.UserName, new { @class = "input user_login", @size = "20" })
+        </label>
+    </p>
+    <p>
+        <label>
+            Mật Khẩu * <br>
+            @*<input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20">*@
+            @Html.TextBoxFor(model => model.Password, new { @class = "input user_pass", @size = "20", @type = "password" })
+        </label>
+    </p>
+    <p>
+    </p>
+    <p class="forgetmenot">
+        <label>
+            @*<input name="rememberme" type="checkbox" id="rememberme" value="forever">*@Nhớ thông tin
+            @Html.CheckBoxFor(model => model.RememberMe, new { @type = "checkbox" })
+        </label>
+    </p>
+    <input hidden id="login_url" value="">
+    <input hidden id="register_url" value="">
+    <input hidden id="reset_url" value="">
+    <p class="submit">
+        <input type="submit" name="btnLogin" class="button button-primary button-large wp-submit" value="Login">
+    </p>
+
+    @*</form>*@
+}

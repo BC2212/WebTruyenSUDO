@@ -1,4 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@using WebSUDO_v2.Models
+@using Models.Entity
+@using System.Web.UI.WebControls
+
+@model dynamic
+
+@{
+    Account account = new Account();
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -60,13 +70,13 @@
                                             <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
                                         </li>
                                         @*<li class="up-manga">
-                                            <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
-                                        </li>*@
+                                                <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
+                                            </li>*@
                                     </ul>
                                 </div>
 
                                 <label class="switch">
-                                    <input type="checkbox"/>
+                                    <input type="checkbox" />
                                     <span class="slider round"></span>
                                 </label>
 
@@ -180,33 +190,36 @@
                             <p class="message login"></p>
                             <meta name="robots" content="max-image-preview:large">
                             <link rel="dns-prefetch" href="https://s.w.org/">
-                            <form name="loginform" id="loginform" method="post">
+
+                            @using (Ajax.BeginForm("Index", "Login", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "form-login" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
                                 <p>
                                     <label>
-                                        Email * <br> <input type="text" name="log" class="input user_login" value="" size="20">
+                                        Username * <br />
+                                        @Html.TextBoxFor(model => account.UserName, new { @class = "input user_login", @size = "20" })
                                     </label>
                                 </p>
+
                                 <p>
                                     <label>
-                                        Mật Khẩu * <br> <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20">
+                                        Mật khẩu * <br />
+                                        @Html.TextBoxFor(model => account.Password, new { @class = "input user_pass", @size = "20", @type = "password" })
                                     </label>
                                 </p>
-                                <p>
-                                </p>
+
                                 <p class="forgetmenot">
                                     <label>
-                                        <input name="rememberme" type="checkbox" id="rememberme" value="forever">Nhớ thông tin
+                                        Nhớ thông tin
+                                        @Html.CheckBoxFor(model => account.RememberMe, new { @type = "checkbox" })
                                     </label>
                                 </p>
-                                <input hidden id="login_url" value="">
-                                <input hidden id="register_url" value="">
-                                <input hidden id="reset_url" value="">
-                                @*<p class="submit">
-                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In">
-                                    <input type="hidden" name="testcookie" value="1">
-                                </p>*@
-                                @Html.ActionLink("Login", "Index", "Login", new { area="Admin", username="admin", password="123"}, new { @class="button button-primary button-large wp-submit"})
-                            </form>
+
+                                <p class="submit">
+                                    <input type="submit" name="btnLogin" class="button button-primary button-large" value="Login" />
+                                </p>
+                            }
                             <p class="nav">
                                 <a href="javascript:void(0)" class="to-reset">Quên Mật Khẩu?</a>
                             </p>
@@ -318,12 +331,17 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                </div>
             </div>
         </div>
     </footer>
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/all.js" asp-append-version="true"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

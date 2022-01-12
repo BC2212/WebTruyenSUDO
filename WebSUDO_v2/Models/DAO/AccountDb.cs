@@ -12,11 +12,16 @@ namespace Models.DAO
         public AccountDb() : base() { }
 
         public bool CheckLogin(string username, string password)
-        {
-            return Convert.ToBoolean(context.Database.SqlQuery<int>("SP_SUDO_CheckLogin @UserName, @Password", new SqlParameter[] {
+        { 
+            return context.Database.SqlQuery<bool>("SP_SUDO_CheckLogin @UserName, @Password", new SqlParameter[] {
                 new SqlParameter("@UserName", username),
                 new SqlParameter("@Password", password)
-            }).SingleOrDefault());
+            }).SingleOrDefault();
+        }
+
+        public string GetGroupID(string username)
+        {
+            return context.Database.SqlQuery<string>("SP_SUDO_GetGroupID @UserName", new SqlParameter("@UserName", username)).SingleOrDefault();
         }
     }
 }

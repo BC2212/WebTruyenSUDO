@@ -5,6 +5,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WebSUDO_v2.Controllers
 {
@@ -13,10 +14,11 @@ namespace WebSUDO_v2.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var ListTruyenMoiCapNhat = new TruyenDb().GetTruyenMoiCapNhat();
+            dynamic model = new ExpandoObject();
+            model.ListTruyenMoiCapNhat = new TruyenDb().GetTruyenMoiCapNhat();
             TempData["ListTruyenHot"] = new TruyenDb().GetTruyenHot();
             TempData.Keep();
-            return View(ListTruyenMoiCapNhat);
+            return View(model);
         }
     }
 }

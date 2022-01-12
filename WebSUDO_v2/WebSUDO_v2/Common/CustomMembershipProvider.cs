@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
+using WebSUDO_v2.Models;
 
-namespace WebSUDO_v2.Areas.Admin.Common
+namespace WebSUDO_v2.Common
 {
-    public class CustomMembershipProvider:MembershipProvider
+    public class CustomMembershipProvider : MembershipProvider
     {
         public override string ApplicationName
         {
