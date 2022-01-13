@@ -1,0 +1,19 @@
+﻿<div class="c-modal_item">
+    <div class="c-user_item">
+        <span>@String.Format("Hi, {0}", "Quynh")</span>
+        <div class="c-user_avatar">
+            <div class="c-user_avatar-image">
+                <img alt="avatar" src="../Assets/img/avatar/default.jpg" class="avatar avatar-50 photo" height="50" width="50" loading="lazy" />
+            </div>
+            <ul class="c-user_menu">
+                <li>
+                    @Html.ActionLink("Cài đặt", "Settings", "Home", new { area="Translator"}, null)
+                </li>
+                <li>
+                    @*@Ajax.ActionLink("Đăng xuất", "Logout", "Login", )*@\
+                    Đăng xuất
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

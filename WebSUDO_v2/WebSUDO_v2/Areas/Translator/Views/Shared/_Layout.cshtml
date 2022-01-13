@@ -1,0 +1,211 @@
+﻿@model int
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120147319-7');
+    </script>
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header class="site-header">
+        <div class="c-header__top">
+            <ul class="search-main-menu">
+                <li>
+                    <form id="blog-post-search" class="ajax manga-search-form" action="#" method="get">
+                        <input type="text" placeholder="Search..." name="s" value="" class="manga-search-field ui-autocomplete-input" autocomplete="off" required>
+                        <a href="javascript:void(0)" class="close-form-search"><i class="icon"><img src="https://img.icons8.com/ios-glyphs/30/000000/xbox-x.png" /></i></a>
+                        <button type="submit"><img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" /></button>
+                        <div class="loader-inner line-scale">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="ui-menu" style="display: none;"></div>
+                    </form>
+                </li>
+            </ul>
+            <div class="main-navigation style-1 ">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="main-navigation_wrap">
+                                <div class="main-menu">
+                                    <ul class="nav navbar-nav main-navbar">
+                                        <li>
+                                            @Html.ActionLink("Trang chủ", "Index", "Home", null, null)
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Thể loại", "Index", "TheLoai", null, null)
+                                        </li>
+                                        <li>
+                                            <a href="#">Hoàn Thành</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lịch Sử</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
+                                        </li>
+                                        <li class="up-manga">
+                                            <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <label class="switch">
+                                    <input type="checkbox" />
+                                    <span class="slider round"></span>
+                                </label>
+
+                                <div class="search-navigation search-sidebar">
+                                    <ul class="main-menu-search nav-menu">
+                                        <li class="menu-search">
+                                            <a href="javascript:;" class="open-search-main-menu">
+                                                <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" />
+                                            </a>
+                                            <ul class="search-main-menu">
+                                                <li>
+                                                    <form class="manga-search-form search-form ajax" action="#" method="get">
+                                                        <input class="manga-search-field ui-autocomplete-input" type="text" placeholder="Search..." name="s" value="" autocomplete="off">
+                                                        <input type="hidden" name="post_type" value="wp-manga"> <i class="icon ion-ios-search"></i>
+                                                        <div class="loader-inner ball-clip-rotate-multiple">
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                        <input type="submit" value="Search">
+                                                        <ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-togle__menu">
+                                    <button type="button" class="menu_icon__open">
+                                        <span></span> <span></span> <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu off-canvas">
+            <div class="close-nav">
+                <button class="menu_icon__close">
+                    <span></span> <span></span>
+                </button>
+            </div>
+            <nav class="off-menu">
+                <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                    <li>
+                        @Html.ActionLink("Thể loại", "Index", "TheLoai", new { area = "" }, new { @class = "menu-link  main-menu-link" })
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link  main-menu-link"> Hoàn Thành </a>
+                        @Html.ActionLink("Hoàn thành", "Index", "Home", new { area = "" }, new { @class = "menu-link  main-menu-link" })
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link  main-menu-link"> Lịch Sử </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sub-header-nav with-border">
+            <div class="container">
+                <div class="sub-nav_content">
+                    <ul class="sub-nav_list list-inline second-menu">
+                        <li>
+                            <a href="#">Manhwa</a>
+                        </li>
+                        <li>
+                            <a href="#">Manga</a>
+                        </li>
+                        <li>
+                            <a href="#">Manhua</a>
+                        </li>
+                        <li>
+                            <a href="#">Romance</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c-modal_item">
+                    <div class="c-user_item">
+                        <span>@String.Format("Hi, {0}", "Quynh")</span>
+                        <div class="c-user_avatar">
+                            <div class="c-user_avatar-image">
+                                <img alt="avatar" src="/Assets/img/avatar/default.jpg" class="avatar avatar-50 photo" height="50" width="50" loading="lazy" />
+                            </div>
+                            <ul class="c-user_menu">
+                                <li>
+                                    @Html.ActionLink("Cài đặt", "Settings", "Home", null, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Quản lý truyện", "Manage", "Home", new { userID=Model}, null)
+                                </li>
+                                <li>
+                                    @*@Ajax.ActionLink("Đăng xuất", "Logout", "Login", )*@
+                                    Đăng xuất
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="nav-footer">
+                            <ul class="list-inline">
+                                <li><a href="#">Điều Khoản</a></li>
+                                <li><a href="#">Chính Sách</a></li>
+                                <li><a href="#">Liên lạc</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p>© 2021 <a href="#">WebSUDO</a> All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/all.js" asp-append-version="true"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

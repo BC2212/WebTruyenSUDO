@@ -31,5 +31,10 @@ namespace Models.DAO
         {
             return context.Database.SqlQuery<Truyen>("SP_SUDO_LayTruyenTheoID @ID", new SqlParameter("@ID", id)).SingleOrDefault();
         }
+
+        public IEnumerable<Truyen> GetTruyenTheoUserID(int id)
+        {
+            return context.Database.SqlQuery<Truyen>("SP_SUDO_LayDSTruyenTheoUserID @UserID", new SqlParameter("@UserID", id)).ToList();
+        }
     }
 }

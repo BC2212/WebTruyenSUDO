@@ -26,12 +26,7 @@ namespace WebSUDO_v2.Controllers
             {
                 //Lưu session
                 FormsAuthentication.SetAuthCookie(account.UserName, true);
-                //switch (new AccountDb().GetGroupID(account.UserName))
-                //{
-                //    case "ADMIN":
-                //        return RedirectToAction("Index", "Home")
-                //}
-                return RedirectToAction("Index", "Home", new { Area = new AccountDb().GetGroupID(account.UserName) });
+                return RedirectToAction("Index", "Home", new { Area = new AccountDb().GetGroupID(account.UserName), userID= new AccountDb().GetUserID(account.UserName) });
             }
             else
             {

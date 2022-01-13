@@ -1,0 +1,80 @@
+﻿@using Models.Entity
+@model dynamic
+@{
+    ViewBag.Title = "Manage";
+    IEnumerable<Truyen> listTruyen = (IEnumerable<Truyen>)Model.ListTruyenQuanLy;
+}
+
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="main-col-inner">
+                    <div class="c-blog-post post-5 status-publish hentry">
+                        <div class="entry-content">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="tabs-content-wrap">
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active">
+                                                <table class="table table-hover list-bookmark">
+                                                    <thead>
+                                                        <th>Manga Name</th>
+                                                        <th>Updated Time</th>
+                                                        <th>Edit</th>
+                                                    </thead>
+                                                        <tbody>
+                                                            @if (listTruyen.Count() > 0)
+                                                            {
+                                                                foreach (Truyen item in listTruyen)
+                                                                {
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="manga-name">
+                                                                                <div class="item-thumb">
+                                                                                    <a href="Url.Action">
+                                                                                        <img width="175" height="106" src="/@item.StorageLink/@item.Image" alt="@item.AlternateName" />
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="item-infor">
+                                                                                    <div class="post-title">
+                                                                                        <h3>
+                                                                                            @Html.ActionLink(item.Name, "Index", "Truyen", new { area="", id=item.ID}, null)
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <div class="chapter font-meta">
+                                                                                        <span>
+                                                                                            "Latest chapter: "
+                                                                                            @Html.ActionLink(item.LatestChapterName, "Read", "Truyen", new { area="", truyenID=item.ID, chapterID=item.LatestChapterID, tenTruyen=item.Name}, null)
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="post-on">Thoi Gian</div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="checkbox">Edit</div>
+                                                                            <a class="wp-manga-delete" href="#">
+                                                                                <i class="icon ion-ios-close"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                }
+                                                            }
+                                                        </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

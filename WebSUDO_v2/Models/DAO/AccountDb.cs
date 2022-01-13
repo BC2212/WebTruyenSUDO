@@ -23,5 +23,10 @@ namespace Models.DAO
         {
             return context.Database.SqlQuery<string>("SP_SUDO_GetGroupID @UserName", new SqlParameter("@UserName", username)).SingleOrDefault();
         }
+
+        public long GetUserID(string username="")
+        {
+            return context.Database.SqlQuery<long>("SP_SUDO_GetUserID @UserName", new SqlParameter("@UserName", username)).SingleOrDefault();
+        }
     }
 }

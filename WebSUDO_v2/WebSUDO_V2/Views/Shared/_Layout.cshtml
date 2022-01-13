@@ -1,6 +1,7 @@
 ﻿@using WebSUDO_v2.Models
 @using Models.Entity
 @using System.Web.UI.WebControls
+@using Models.DAO
 
 @model dynamic
 
@@ -69,9 +70,9 @@
                                         <li>
                                             <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login">Đang theo dõi</a>
                                         </li>
-                                        @*<li class="up-manga">
+                                        <li class="up-manga">
                                                 <a href="#" class="menu-link  main-menu-link"> Đăng Truyện </a>
-                                            </li>*@
+                                            </li>
                                     </ul>
                                 </div>
 
@@ -191,7 +192,7 @@
                             <meta name="robots" content="max-image-preview:large">
                             <link rel="dns-prefetch" href="https://s.w.org/">
 
-                            @using (Ajax.BeginForm("Index", "Login", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "form-login" }))
+                            @using (Ajax.BeginForm("Index", "Login", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "form-login" , OnSuccess=String.Format("$('body').append('<input class='hidden' user-id='{0}' id='UserID'>')", new AccountDb().GetUserID(String.IsNullOrEmpty(account.UserName) ? "" : account.UserName))}))
                             {
                                 @Html.AntiForgeryToken()
                                 @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
